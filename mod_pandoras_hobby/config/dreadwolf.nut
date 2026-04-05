@@ -1,0 +1,45 @@
+::Const.Tactical.Actor.DreadWarWolf <- {
+	XP = 200,
+	ActionPoints = 12,
+	Hitpoints = 120,
+	Bravery = 70,
+	Stamina = 160,
+	MeleeSkill = 65,
+	RangedSkill = 0,
+	MeleeDefense = 25,
+	RangedDefense = 25,
+	Initiative = 140,
+	FatigueEffectMult = 1.0,
+	MoraleEffectMult = 1.0,
+	Armor = [
+		30,
+		30
+	],
+	FatigueRecoveryRate = 20
+};
+
+::Const.Strings.DreadwolfNames <- [
+	"Headcrusher",
+	"Shieldbender",
+	"Crusher",
+	"Skullcracker",
+	"Bonegrinder",
+	"Maimer",	
+	"Punisher",
+	"Harvester",
+	"Thing",
+	"Beast",
+	"Snap",
+	"Monster",
+	"Biter",
+	"Spirit",	
+	"Howler",
+	"Throatripper",
+	"Bear",
+	"Man-eater",
+	"Lil Bastard",
+	"Offal",
+	"Nightmare",
+	"Midnight",
+	"Blacky",	
+];

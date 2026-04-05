@@ -1,0 +1,44 @@
+.world-campfire-screen > .l-hire-dialog-container .content .details-container .row.is-ingredients-container > .is-components-container
+{
+    top: 0.0rem;
+    bottom: 0.0rem;
+
+    width: 47.0rem;
+}
+
+.world-campfire-screen > .l-hire-dialog-container .content .details-container .row.is-requirements-container
+{
+    top: 25.0rem;
+    height: 20.0rem;
+}
+
+.world-campfire-screen > .l-hire-dialog-container .content .details-container .row.is-requirements-container > .is-requirements-components-container
+{    
+    width: 47.0rem;
+}
+
+.world-campfire-screen > .l-main-dialog-container .slot0
+{    
+    left: 25.0rem;    
+}
+
+.world-campfire-screen > .l-main-dialog-container .slot1
+{    
+    left: 47.0rem;    
+}
+
+.world-campfire-screen > .l-main-dialog-container .slot2
+{    
+    left: -5.0rem;
+}
+
+.world-campfire-screen > .l-main-dialog-container .slot3
+{    
+    bottom: -8.0rem;
+}
+
+.world-campfire-screen > .l-main-dialog-container .slot4
+{    
+    left: 57.0rem;
+    bottom: 0.0rem;
+}

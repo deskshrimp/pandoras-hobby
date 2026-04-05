@@ -1,0 +1,85 @@
+<brush name="gfx/mod_pandoras_hobby.png" version="17">
+  <sprite id="ph_potion_conq_effect" ic="FF294246" img="icons\ph_potion_conq_effect.png" />
+  <sprite id="ph_potion_barb_effect" ic="FF294246" img="icons\ph_barb_pot_effect.png" />
+  <sprite id="ph_potion_barb_effect_mini" offsetY="35" ic="FF28364D" img="icons\ph_barb_pot_effect_mini.png" />  
+  <sprite id="ph_scalpel_01" offsetY="35" ic="FF6B6B74" width="104" height="142" img="equips\ph_scalpel_01.png" left="-6" right="30" top="-55" bottom="-15" />
+  <sprite id="ph_scalpel_01_bloodied" offsetY="35" ic="FF58596A" width="104" height="142" img="equips\ph_scalpel_01_bloodied.png" left="-6" right="30" top="-55" bottom="-15" />
+  <sprite id="ph_scalpel_02" offsetY="35" ic="FF6B6B74" width="104" height="142" img="equips\ph_scalpel_02.png" left="-6" right="30" top="-55" bottom="-15" />
+  <sprite id="ph_scalpel_02_bloodied" offsetY="35" ic="FF58596A" width="104" height="142" img="equips\ph_scalpel_02_bloodied.png" left="-6" right="30" top="-55" bottom="-15" />
+  <sprite id="ph_golden_whacker" offsetY="35" ic="FF374153" width="130" height="142" img="equips\ph_golden_whacker.png" left="-65" right="25" top="-59" bottom="49" />
+  <sprite id="ph_golden_whacker_bloodied" offsetY="35" ic="FF2E374F" width="130" height="142" img="equips\ph_golden_whacker_bloodied.png" left="-65" right="25" top="-59" bottom="49" />
+  <sprite id="ph_bust_body_420" offsetY="35" ic="FF3A4148" width="104" height="142" img="equips\ph_bust_body_420.png" top="-51" bottom="11" />
+  <sprite id="ph_bust_body_420_damaged" offsetY="35" ic="FF323A41" width="104" height="142" img="equips\ph_bust_body_420_damaged.png" left="-45" right="43" top="-51" bottom="11" />
+  <sprite id="ph_bust_body_420_dead" offsetX="6" offsetY="10" f="64FE" ic="FF31383F" width="191" height="185" img="equips\ph_bust_body_420_dead.png" left="-59" right="57" top="-53" bottom="49" />
+  <sprite id="ph_bust_body_420_dead_arrows" offsetX="6" offsetY="10" f="64FB" ic="FF484F53" width="191" height="185" img="equips\ph_bust_body_420_dead_arrows.png" left="-15" right="23" top="-31" bottom="29" />
+  <sprite id="ph_bust_body_420_dead_javelin" offsetX="6" offsetY="10" f="64FB" ic="FF12182B" width="191" height="185" img="equips\ph_bust_body_420_dead_javelin.png" left="-16" right="22" top="-41" bottom="53" />
+  <sprite id="ph_bust_body_422" offsetY="35" ic="FF3A4148" width="104" height="142" img="equips\ph_bust_body_422.png" top="-51" bottom="11" />
+  <sprite id="ph_bust_body_422_damaged" offsetY="35" ic="FF323A41" width="104" height="142" img="equips\ph_bust_body_422_damaged.png" left="-45" right="43" top="-51" bottom="11" />
+  <sprite id="ph_bust_body_422_dead" offsetX="6" offsetY="10" f="64FE" ic="FF31383F" width="191" height="185" img="equips\ph_bust_body_422_dead.png" left="-59" right="57" top="-53" bottom="49" />
+  <sprite id="ph_bust_body_422_dead_arrows" offsetX="6" offsetY="10" f="64FB" ic="FF484F53" width="191" height="185" img="equips\ph_bust_body_420_dead_arrows.png" left="-15" right="23" top="-31" bottom="29" />
+  <sprite id="ph_bust_body_422_dead_javelin" offsetX="6" offsetY="10" f="64FB" ic="FF12182B" width="191" height="185" img="equips\ph_bust_body_420_dead_javelin.png" left="-16" right="22" top="-41" bottom="53" />
+  <sprite id="ph_bust_body_425" offsetY="35" ic="FF172330" width="104" height="142" img="equips\ph_bust_body_425.png" top="-51" bottom="11" />
+  <sprite id="ph_bust_body_425_damaged" offsetY="35" ic="FF15202C" width="104" height="142" img="equips\ph_bust_body_425_damaged.png" top="-51" bottom="11" />
+  <sprite id="ph_bust_body_425_dead" offsetX="6" offsetY="10" f="64FE" ic="FF15202B" width="131" height="125" img="equips\ph_bust_body_425_dead.png" left="-53" right="55" top="-51" bottom="45" />
+  <sprite id="ph_bust_body_425_dead_arrows" offsetX="6" offsetY="10" f="64FB" ic="FF484E52" width="131" height="125" img="equips\ph_bust_body_425_dead_arrows.png" left="-35" right="23" top="-16" bottom="38" />
+  <sprite id="ph_bust_body_425_dead_javelin" offsetX="6" offsetY="10" f="64FB" ic="FF141C29" width="131" height="125" img="equips\ph_bust_body_425_dead_javelin.png" left="-28" right="16" top="-21" bottom="61" />
+  <sprite id="ph_bust_helmet_420" offsetY="35" ic="FF43453D" width="140" height="248" img="equips\ph_bust_helmet_420.png" left="-34" right="36" top="-32" bottom="52" />
+  <sprite id="ph_bust_helmet_420_damaged" offsetY="35" ic="FF3F423A" width="140" height="248" img="equips\ph_bust_helmet_420_damaged.png" left="-34" right="36" top="-32" bottom="52" />
+  <sprite id="ph_bust_helmet_420_dead" offsetX="6" offsetY="10" f="64F0" f1="-15" f2="-15" ic="FF252B31" width="191" height="185" img="equips\ph_bust_helmet_420_dead.png" left="-73" right="49" top="-73" bottom="21" />
+  <sprite id="ph_bust_helmet_422" offsetY="35" ic="FF202426" width="140" height="248" img="equips\ph_bust_helmet_422.png" left="-50" right="52" top="-27" bottom="57" />
+  <sprite id="ph_bust_helmet_422_damaged" offsetY="35" ic="FF202425" width="140" height="248" img="equips\ph_bust_helmet_422_damaged.png" left="-50" right="52" top="-27" bottom="57" />
+  <sprite id="ph_bust_helmet_422_dead" offsetX="6" offsetY="10" f="64F0" f1="-15" f2="-15" ic="FF212527" width="191" height="185" img="equips\ph_bust_helmet_422_dead.png" left="-55" right="37" top="-82" bottom="26" />  
+  <sprite id="ph_bust_helmet_425" offsetY="35" ic="FF18262F" width="184" height="222" img="equips\ph_bust_helmet_425.png" left="-32" right="30" top="-31" bottom="71" />
+  <sprite id="ph_bust_helmet_425_damaged" offsetY="35" ic="FF16242D" width="184" height="222" img="equips\ph_bust_helmet_425_damaged.png" left="-32" right="30" top="-31" bottom="71" />
+  <sprite id="ph_bust_helmet_425_dead" offsetX="6" offsetY="10" f="64F0" f1="-15" f2="-15" ic="FF16242E" width="191" height="185" img="equips\ph_bust_helmet_425_dead.png" left="-62" right="22" top="-69" bottom="3" />
+  <sprite id="ph_scalpel_stab" ic="FF614551" img="icons\ph_scalpel_stab.png" />
+  <sprite id="ph_vivisect" ic="FF23165B" img="icons\ph_vivisect.png" />  
+  <sprite id="ph_whack" ic="FF1A1755" img="icons\ph_whack.png" />
+  <sprite id="ph_spin_to_win" ic="FF1A1755" img="icons\ph_spin_to_win.png" />
+  <sprite id="ph_slap" ic="88385381" img="icons\ph_slap.png" />
+  <sprite id="ph_icon_throwing_net_03" offsetY="35" ic="FF3E4B56" width="130" height="142" img="equips\ph_icon_throwing_net_03.png" left="-47" right="17" top="-40" bottom="12" />
+  <sprite id="ph_bust_net_03" offsetY="38" ic="FF374550" width="229" height="280" img="misc\ph_bust_net_03.png" left="-114" right="115" top="-135" bottom="133" />
+  <sprite id="ph_bust_net_back_03" offsetY="38" ic="FF2F3A43" width="229" height="280" img="misc\ph_bust_net_back_03.png" left="-78" right="94" top="-95" bottom="123" />
+  <sprite id="ph_bust_helmet_479" offsetX="-2" offsetY="35" ic="FF1C3149" width="184" height="222" img="equips\ph_bust_helmet_479.png" left="-40" right="42" top="-5" bottom="101" />
+  <sprite id="ph_bust_helmet_479_damaged" offsetY="35" ic="FF1C304A" width="184" height="222" img="equips\ph_bust_helmet_479_damaged.png" left="-40" right="42" top="-5" bottom="101" />
+  <sprite id="ph_bust_helmet_479_dead" offsetX="6" offsetY="10" f="64F0" f1="-15" f2="-15" ic="FF1C314B" width="191" height="185" img="equips\ph_bust_helmet_479_dead.png" left="-88" right="2" top="-93" bottom="-9" />
+  <sprite id="ph_bust_helmet_480" offsetX="-2" offsetY="35" ic="FF2E3C51" width="184" height="222" img="equips\ph_bust_helmet_480.png" left="-27" right="37" top="-5" bottom="90" />
+  <sprite id="ph_bust_helmet_480_damaged" offsetY="35" ic="FF2C3B51" width="184" height="222" img="equips\ph_bust_helmet_480_damaged.png" left="-28" right="36" top="-5" bottom="90" />
+  <sprite id="ph_bust_helmet_480_dead" offsetX="6" offsetY="10" f="64F0" f1="-15" f2="-15" ic="FF2D3C52" width="191" height="185" img="equips\ph_bust_helmet_480_dead.png" left="-63" right="3" top="-74" bottom="-8" />
+  <sprite id="ph_bust_helmet_481" offsetX="-3" offsetY="35" ic="FF22406B" width="184" height="222" img="equips\ph_bust_helmet_481.png" left="-21" right="39" top="-4" bottom="72" />
+  <sprite id="ph_bust_helmet_481_damaged" offsetX="-3" offsetY="35" ic="FF213D66" width="184" height="222" img="equips\ph_bust_helmet_481_damaged.png" left="-20" right="34" top="-4" bottom="72" />
+  <sprite id="ph_bust_helmet_481_dead" offsetX="6" offsetY="10" f="64F0" f1="-15" f2="-15" ic="FF22406A" width="191" height="185" img="equips\ph_bust_helmet_481_dead.png" left="-64" right="14" top="-66" bottom="-12" />
+  <sprite id="ph_icon_hexe_wand" offsetY="35" ic="FF323B48" width="104" height="142" img="equips\ph_icon_hexe_wand.png" left="-43" right="-1" top="-53" bottom="29" />
+  <sprite id="ph_icon_hexe_wand_bloodied" offsetY="35" ic="FF2D3547" width="104" height="142" img="equips\ph_icon_hexe_wand_bloodied.png" left="-43" right="-1" top="-53" bottom="29" />
+  <sprite id="ph_ancient_necro_trophy" offsetY="35" ic="FF3C4E66" width="140" height="248" img="equips\ph_ancient_necro_trophy.png" left="-23" right="33" top="-56" bottom="16" />
+  <sprite id="ph_ancient_necro_trophy_dead" offsetX="6" offsetY="10" f="64FD" ic="FF3D4F67" width="191" height="185" img="equips\ph_ancient_necro_trophy_dead.png" left="-45" right="7" top="-56" bottom="20" />
+  <sprite id="ph_grisly_trophy" offsetY="35" ic="FF474953" width="140" height="248" img="equips\ph_grisly_trophy.png" left="-22" right="34" top="-49" bottom="3" />
+  <sprite id="ph_grisly_trophy_dead" offsetX="6" offsetY="10" f="64FD" ic="FF484A54" width="191" height="185" img="equips\ph_grisly_trophy_dead.png" left="-39" right="13" top="-45" bottom="17" />
+  <sprite id="ph_bust_spider_legs_front_420" offsetY="35" ic="FF171C20" width="174" height="214" img="beasts\ph_bust_spider_front_420.png" left="-7" right="61" top="-54" bottom="16" />
+  <sprite id="ph_bust_spider_legs_back_420" offsetY="35" ic="FF12171C" width="174" height="214" img="beasts\ph_bust_spider_legs_back_420.png" left="-47" right="17" top="-52" bottom="32" />
+  <sprite id="ph_bust_spider_body_420" offsetY="35" ic="FF212E38" width="174" height="214" img="beasts\ph_bust_spider_body_420.png" left="-41" right="71" top="-53" bottom="43" />
+  <sprite id="ph_bust_spider_body_420_dead" offsetY="30" f="6403" ic="FF1A262B" width="169" height="139" img="beasts\ph_bust_spider_body_420_dead.png" left="-71" right="81" top="-64" bottom="50" />
+  <sprite id="ph_bust_spider_head_420" offsetY="35" ic="FF25394B" width="174" height="214" img="beasts\ph_bust_spider_head_420.png" left="-39" right="5" top="-64" bottom="-12" />
+  <sprite id="ph_bust_spider_head_420_dead" offsetY="30" f="6401" f1="30" f2="-25" ic="FF20313D" width="169" height="139" img="beasts\ph_bust_spider_head_420_dead.png" left="2" right="66" top="-62" bottom="6" />
+  <sprite id="ph_bust_spider_legs_front_421" offsetY="35" ic="FF171C20" width="174" height="214" img="beasts\ph_bust_spider_front_421.png" left="-7" right="61" top="-54" bottom="16" />
+  <sprite id="ph_bust_spider_legs_back_421" offsetY="35" ic="FF12171C" width="174" height="214" img="beasts\ph_bust_spider_legs_back_421.png" left="-47" right="17" top="-52" bottom="32" />
+  <sprite id="ph_bust_spider_body_421" offsetY="35" ic="FF212E38" width="174" height="214" img="beasts\ph_bust_spider_body_421.png" left="-41" right="71" top="-53" bottom="43" />
+  <sprite id="ph_bust_spider_body_421_dead" offsetY="30" f="6403" ic="FF1A262B" width="169" height="139" img="beasts\ph_bust_spider_body_421_dead.png" left="-71" right="81" top="-64" bottom="50" />
+  <sprite id="ph_bust_spider_head_421" offsetY="35" ic="FF25394B" width="174" height="214" img="beasts\ph_bust_spider_head_421.png" left="-39" right="5" top="-64" bottom="-12" />
+  <sprite id="ph_bust_spider_head_421_dead" offsetY="30" f="6401" f1="30" f2="-25" ic="FF20313D" width="169" height="139" img="beasts\ph_bust_spider_head_421_dead.png" left="2" right="66" top="-62" bottom="6" />
+  <sprite id="ph_bust_spider_legs_front_422" offsetY="35" ic="FF171C20" width="174" height="214" img="beasts\ph_bust_spider_front_422.png" left="-7" right="61" top="-54" bottom="16" />
+  <sprite id="ph_bust_spider_legs_back_422" offsetY="35" ic="FF12171C" width="174" height="214" img="beasts\ph_bust_spider_legs_back_422.png" left="-47" right="17" top="-52" bottom="32" />
+  <sprite id="ph_bust_spider_body_422" offsetY="35" ic="FF212E38" width="174" height="214" img="beasts\ph_bust_spider_body_422.png" left="-41" right="71" top="-53" bottom="43" />
+  <sprite id="ph_bust_spider_body_422_dead" offsetY="30" f="6403" ic="FF1A262B" width="169" height="139" img="beasts\ph_bust_spider_body_422_dead.png" left="-71" right="81" top="-64" bottom="50" />
+  <sprite id="ph_bust_spider_head_422" offsetY="35" ic="FF25394B" width="174" height="214" img="beasts\ph_bust_spider_head_422.png" left="-39" right="5" top="-64" bottom="-12" />
+  <sprite id="ph_bust_spider_head_422_dead" offsetY="30" f="6401" f1="30" f2="-25" ic="FF20313D" width="169" height="139" img="beasts\ph_bust_spider_head_422_dead.png" left="2" right="66" top="-62" bottom="6" />
+  <sprite id="ph_bust_direwolf_champ" offsetY="35" ic="FF191B1F" width="104" height="142" img="beasts\ph_bust_direwolf_champ.png" top="-62" bottom="40" />
+  <sprite id="ph_bust_direwolf_champ_head" offsetY="35" ic="FF2A333D" width="104" height="142" img="beasts\ph_bust_direwolf_champ_head.png" left="-52" right="20" top="-33" bottom="43" />
+  <sprite id="ph_bust_direwolf_champ_head_dead" offsetX="4" offsetY="24" f="6401" ic="FF252C38" width="179" height="154" img="beasts\ph_bust_direwolf_champ_head_dead.png" left="-37" right="29" top="-51" bottom="7" />
+  <sprite id="ph_bust_direwolf_champ_body_dead" offsetX="4" offsetY="24" f="6403" ic="FF1B1E2A" width="179" height="154" img="beasts\ph_bust_direwolf_champ_body_dead.png" left="-84" right="82" top="-61" bottom="59" />
+  <sprite id="ph_upgrade_01_back" offsetY="35" ic="FF1A1C21" width="140" height="248" img="misc\ph_upgrade_01_back.png" left="-61" right="55" top="-49" bottom="43" />
+  <sprite id="ph_upgrade_01_back_dead" offsetX="6" offsetY="10" f="64FD" ic="FF1A1D21" width="191" height="185" img="misc\ph_upgrade_01_back_dead.png" left="-56" right="50" top="-71" bottom="23" />
+  <sprite id="ph_upgrade_01_front" offsetY="35" ic="FF2A313D" width="140" height="248" img="misc\ph_upgrade_01_front.png" left="-70" right="0" top="-56" bottom="18" />
+  <sprite id="ph_upgrade_01_front_damaged" offsetY="35" ic="FF2A313D" width="140" height="248" img="misc\ph_upgrade_01_front_damaged.png" left="-70" right="0" top="-56" bottom="18" />
+  <sprite id="ph_upgrade_01_front_dead" offsetX="6" offsetY="10" f="64EF" ic="FF2A313E" width="191" height="185" img="misc\ph_upgrade_01_front_dead.png" left="-14" right="60" top="-76" bottom="2" />
+</brush>
