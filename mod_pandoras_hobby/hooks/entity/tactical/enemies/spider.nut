@@ -31,6 +31,7 @@
             baseProperties.Hitpoints += 20;
             baseProperties.MeleeDefense += 10;
 		    baseProperties.RangedDefense += 10;
+            baseProperties.DamageDirectAdd += 0.1;
 
             this.getSkills().add(::new("scripts/skills/ph_champs/ph_champ_venom"));
         }
@@ -41,11 +42,12 @@
             this.setSize(1.0);
 
             baseProperties.ActionPoints -= 2;
-            baseProperties.Hitpoints += 40;
+            baseProperties.Hitpoints += 50;
             baseProperties.MeleeSkill += 15;
 		    baseProperties.MeleeDefense -= 10;
 		    baseProperties.RangedDefense -= 10;
-		    baseProperties.DamageRegularMax += 15;
+            baseProperties.DamageRegularMin += 5;
+		    baseProperties.DamageRegularMax += 20;
 
             this.getSkills().add(::new("scripts/skills/perks/perk_fearsome"));
             if ( ::Hooks.hasMod("mod_hardened") )
@@ -56,6 +58,9 @@
 		        }));
             }
             
+            //he's bigger so he gets extra reach!
+            this.m.BaseProperties.Reach += 1;
+            
         }
         else if(variant == 422)
         {
@@ -65,7 +70,7 @@
 
             baseProperties.ActionPoints += 1;
             baseProperties.Hitpoints += 10;
-            baseProperties.Initiative += 100;
+            baseProperties.Initiative += 110;            
             
             this.getSkills().add(::new("scripts/skills/effects/dodge_effect"));
             this.getSkills().add(::new("scripts/skills/perks/perk_nimble"));
@@ -109,27 +114,12 @@
                 }                
 
                 //and some regular loot
-                local roll = ::Math.rand(0,100);
-                if(roll < 33)
-                {
-                    ret.push(::new("scripts/items/misc/spider_silk_item"));
-                }
-                else if(roll < 66)
-                {
-                    ret.push(::new("scripts/items/misc/poison_gland_item"));
-                }
-                else
-                {                    
-                    ret.push(::new("scripts/items/loot/webbed_valuables_item"));
-                }
+                ret.push(::new("scripts/items/loot/webbed_valuables_item"));
+                if(::Math.rand(0,100) < 50) ret.push(::new("scripts/items/loot/webbed_valuables_item"));
 
                 if(::World.Retinue.PH_HasFollowerTypeWithSkill(::PandorasHobby.Follower.Archetype.Healer, ::PandorasHobby.Follower.Skill.Alch_Anatomist_1))
                 {
                     this.PH_AttemptIncompletePotionDrop( ret, "webknecht", ::Const.Items.PH_ReducedPotionDropRate );                    
-                }
-                else
-                {
-                    ret.push(::new("scripts/items/loot/webbed_valuables_item"));
                 }
             }
         }

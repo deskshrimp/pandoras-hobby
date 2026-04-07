@@ -77,14 +77,14 @@ this.ph_champ_venom_effect <- this.inherit("scripts/skills/skill", {
 		    	icon = "ui/icons/damage_received.png",
 	    		text = ::Reforged.Mod.Tooltips.parseString("Once per [round|Concept.Round], when you [wait|Concept.Wait] or end your [turn|Concept.Turn], take " + ::MSU.Text.colorNegative(this.m.Damage) + " [Hitpoint|Concept.Hitpoints] Damage"),
     		});
-        }
 
-		ret.push({
-			id = 12,
-			type = "text",
-			icon = "ui/icons/damage_received.png",
-			text = ::Reforged.Mod.Tooltips.parseString("Recover " + ::MSU.Text.colorizeMultWithText(this.m.HitpointRecoveryMult) + " [Hitpoints|Concept.Hitpoints]"),
-		});
+			ret.push({
+				id = 12,
+				type = "text",
+				icon = "ui/icons/damage_received.png",
+				text = ::Reforged.Mod.Tooltips.parseString("Recover " + ::MSU.Text.colorizeMultWithText(this.m.HitpointRecoveryMult) + " [Hitpoints|Concept.Hitpoints]"),
+			});
+        }
 
 		return ret;
 	}
@@ -92,7 +92,8 @@ this.ph_champ_venom_effect <- this.inherit("scripts/skills/skill", {
     function onUpdate( _properties )
     {
         this.skill.onUpdate( _properties );
-        _properties.HitpointRecoveryMult *= this.m.HitpointRecoveryMult;
+		if(!this.getContainer().getActor().getCurrentProperties().IsImmuneToPoison)
+        	_properties.HitpointRecoveryMult *= this.m.HitpointRecoveryMult;
     }
 
 	function resetTime()

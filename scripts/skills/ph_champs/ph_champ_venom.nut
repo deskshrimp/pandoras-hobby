@@ -27,13 +27,13 @@ this.ph_champ_venom <- this.inherit("scripts/skills/skill", {
 	}
 
 	function onTargetHit( _skill, _targetEntity, _bodyPart, _damageInflictedHitpoints, _damageInflictedArmor )
-	{
+	{		
 		if (!_targetEntity.isAlive())
 		{
 			return;
 		}
 
-		if (_damageInflictedHitpoints < this.Const.Combat.PoisonEffectMinDamage || _targetEntity.getHitpoints() <= 0)
+		if (_damageInflictedHitpoints < ::Const.Combat.PoisonEffectMinDamage || _targetEntity.getHitpoints() <= 0)
 		{
 			return;
 		}
@@ -57,9 +57,8 @@ this.ph_champ_venom <- this.inherit("scripts/skills/skill", {
 		local poison = _targetEntity.getSkills().getSkillByID("effects.ph_champ_venom");
 
 		if (poison == null)
-		{
-			local effect = this.new("scripts/skills/effects/ph_champ_venom_effect");
-			_targetEntity.getSkills().add(effect);
+		{			
+			_targetEntity.getSkills().add( ::new("scripts/skills/effects/ph_champ_venom_effect") );
 		}
 		else
 		{

@@ -116,7 +116,7 @@ this.ph_twig_liver_mash_upgrade <- this.inherit("scripts/items/armor_upgrades/na
 
         		if(bleed.m.Stacks == 0)
         		{
-            		actor.getSkills().removeByID("effects.bleeding");
+					bleed.removeSelf();            		
         		}
 				msg += " and a bleeding wound has been sealed (-1 bleed stack).";
 			}

@@ -11,15 +11,17 @@
 
         //Boost their hitpoints
         local baseProperties = this.m.BaseProperties;
-        baseProperties.Hitpoints += 100;
+        baseProperties.Hitpoints += 200;
         
-        //give back the vanilla perks
-        this.m.Skills.add(this.new("scripts/skills/perks/perk_pathfinder"));		
-        this.m.Skills.add(this.new("scripts/skills/perks/perk_hold_out"));
-
-        //bonus perk -- they should worry with a giant looming over them!
-        this.m.Skills.add(this.new("scripts/skills/perks/perk_rf_menacing"));
-
+        if ( ::Hooks.hasMod("mod_hardened") )
+        {
+            this.m.Skills.add(::Reforged.new("scripts/skills/perks/perk_rf_rattle", function(o) {
+			    o.m.RequiredWeaponType = null;
+		    }));
+        }
+        
+        this.m.Skills.add(::new("scripts/skills/perks/perk_lone_wolf"));        
+        
         return true;
     }
 
@@ -32,10 +34,35 @@
 		{			
             if(this.m.IsMiniboss)
             {
-                ret.push(::new("scripts/items/misc/ph_unhold_liver_item"));
+                local drops = null;
+                if (this.isKindOf(this, "unhold_frost"))
+                {
+                    drops = ::MSU.Class.WeightedContainer([
+                        [30, "misc/ph_unhold_liver_item"],
+                        [70, "misc/ph_unhold_bones_item"],                        
+                    ]);
+                }
+                else if (this.isKindOf(this, "unhold_bog"))
+                {
+                    drops = ::MSU.Class.WeightedContainer([
+                        [70, "misc/ph_unhold_liver_item"],
+                        [30, "misc/ph_unhold_bones_item"],                        
+                    ]);
+                }
+                else    //regular Unhold
+                {
+                    drops = ::MSU.Class.WeightedContainer([
+                        [30, "misc/ph_unhold_liver_item"],
+                        [30, "misc/ph_unhold_bones_item"],
+                        [30, "loot/deformed_valuables_item"],
+                    ]);
+                }                
+                ret.push(::new("scripts/items/" + drops.roll() ));
+
+                //always drop a heart
+                ret.push(::new("scripts/items/misc/ph_unhold_heart_item"));
                 
-                //guarantee some valuables drop at least
-                ret.push(::new("scripts/items/loot/deformed_valuables_item"));
+                //and some meat
                 ret.push(::new("scripts/items/supplies/strange_meat_item"));
                 
                 if(::World.Retinue.PH_HasFollowerTypeWithSkill(::PandorasHobby.Follower.Archetype.Healer, ::PandorasHobby.Follower.Skill.Alch_Anatomist_1))

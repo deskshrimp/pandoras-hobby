@@ -13,11 +13,15 @@
         local baseProperties = this.m.BaseProperties;
         baseProperties.Hitpoints += 100;
         
-        //give the HD perk from Frost version
-        this.getSkills().add(::new("scripts/skills/perks/perk_killing_frenzy"));
-
-        //bonus perk -- they should worry with a giant looming over them!
-        this.m.Skills.add(this.new("scripts/skills/perks/perk_rf_menacing"));
+        if ( ::Hooks.hasMod("mod_hardened") )
+        {
+            this.m.Skills.add(::Reforged.new("scripts/skills/perks/perk_rf_rattle", function(o) {
+			    o.m.RequiredWeaponType = null;
+		    }));
+        }
+        
+        this.m.Skills.add(::new("scripts/skills/perks/perk_lone_wolf"));
+        this.m.Skills.add(::new("scripts/skills/perks/perk_rf_feral_rage"));
 
         return true;
     }

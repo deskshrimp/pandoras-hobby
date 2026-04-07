@@ -45,7 +45,7 @@
                 //unique loot (vanilla is 70/30 for pelt/gland)
                 local drops = ::MSU.Class.WeightedContainer([
                     [30, "ph_hyena_gland_item"],
-                    [60, "ph_zombie_ring_item"],
+                    [60, "ph_wolf_pelt_item"],
                 ]);
                 ret.push(::new("scripts/items/misc/" + drops.roll() ));
 

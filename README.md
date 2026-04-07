@@ -1,4 +1,4 @@
-"# pandoras_hobby" 
+# TLDR Summary
 
 Pandora's Hobby is a follower overhaul mod for Battle Brothers: Reforged that completely replaces the default follower system, adds new champions along with dozens of new drops, recipes, etc.
 

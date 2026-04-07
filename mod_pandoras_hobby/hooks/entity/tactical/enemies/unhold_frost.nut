@@ -13,13 +13,17 @@
         local baseProperties = this.m.BaseProperties;
         baseProperties.Hitpoints += 100;
         
-        //give them back the vanilla steel brow -- they are the apex unhold afterall
-        this.getSkills().add(::new("scripts/skills/perks/perk_steel_brow"));
-
-        //bonus perks -- the menacing frost bully        
-        this.m.Skills.add(this.new("scripts/skills/perks/perk_rf_menacing"));
-        this.m.Skills.add(this.new("scripts/skills/perks/perk_rf_bully"));
-
+        if ( ::Hooks.hasMod("mod_hardened") )
+        {
+            this.m.Skills.add(::Reforged.new("scripts/skills/perks/perk_rf_rattle", function(o) {
+			    o.m.RequiredWeaponType = null;
+		    }));
+        }
+        
+        this.m.Skills.add(::new("scripts/skills/perks/perk_lone_wolf"));
+        this.m.Skills.add(::new("scripts/skills/perks/perk_rf_feral_rage"));
+        this.m.Skills.add(::new("scripts/skills/perks/perk_rf_bully"));
+        
         return true;
     }
 });
