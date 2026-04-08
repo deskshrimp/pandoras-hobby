@@ -26,7 +26,7 @@ this.ph_golden_whacker <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ConditionMax = 150.0;
 		this.m.StaminaModifier = -20;
 		this.m.RegularDamage = 60;
-		this.m.RegularDamageMax = 100;
+		this.m.RegularDamageMax = 90;
 		this.m.ArmorDamageMult = 2.0;
 		this.m.DirectDamageMult = 0.5;
 		this.m.ChanceToHitHead = 0;

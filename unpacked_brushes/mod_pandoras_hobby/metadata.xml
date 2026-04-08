@@ -82,4 +82,7 @@
   <sprite id="ph_upgrade_01_front" offsetY="35" ic="FF2A313D" width="140" height="248" img="misc\ph_upgrade_01_front.png" left="-70" right="0" top="-56" bottom="18" />
   <sprite id="ph_upgrade_01_front_damaged" offsetY="35" ic="FF2A313D" width="140" height="248" img="misc\ph_upgrade_01_front_damaged.png" left="-70" right="0" top="-56" bottom="18" />
   <sprite id="ph_upgrade_01_front_dead" offsetX="6" offsetY="10" f="64EF" ic="FF2A313E" width="191" height="185" img="misc\ph_upgrade_01_front_dead.png" left="-14" right="60" top="-76" bottom="2" />
+  <sprite id="ph_upgrade_06_back" offsetY="35" ic="FF45627A" width="140" height="248" img="misc\ph_upgrade_06_back.png" left="-53" right="47" top="-45" bottom="9" />
+  <sprite id="ph_upgrade_06_back_damaged" offsetY="35" ic="FF3B556C" width="140" height="248" img="misc\ph_upgrade_06_back_damaged.png" left="-53" right="47" top="-45" bottom="9" />
+  <sprite id="ph_upgrade_06_back_dead" offsetX="6" offsetY="10" f="64FD" ic="FF3C566E" width="191" height="185" img="misc\ph_upgrade_06_back_dead.png" left="-51" right="53" top="-52" bottom="10" />
 </brush>

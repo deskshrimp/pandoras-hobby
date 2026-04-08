@@ -93,7 +93,7 @@ if ( ::Hooks.hasMod("mod_hardened") )
 ::Const.World.Spawn.Troops.GhoulHIGH.TitleList <- ::Const.Strings.PH_GhoulTitles;
 
 //Snakes
-::Const.World.Spawn.Troops.Serpent.Variant = 1;
+::Const.World.Spawn.Troops.Serpent.Variant = 2;
 ::Const.World.Spawn.Troops.Serpent.NameList <- ::Const.Strings.PH_SnakeNames;
 ::Const.World.Spawn.Troops.Serpent.TitleList <- null;
 

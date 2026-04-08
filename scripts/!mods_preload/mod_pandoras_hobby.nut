@@ -1,7 +1,7 @@
 ::PandorasHobby <- {
 	ID = "mod_pandoras_hobby",
 	Name = "Pandora's Hobby",
-	Version = "1.1.1"	
+	Version = "1.2.0"	
 	GitHubURL = "https://github.com/deskshrimp/pandoras-hobby",
 	NexusURL = "https://www.nexusmods.com/battlebrothers/mods/992",
 }
