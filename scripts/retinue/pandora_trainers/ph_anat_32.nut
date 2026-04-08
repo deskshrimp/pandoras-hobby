@@ -7,7 +7,7 @@ this.ph_anat_32 <- this.inherit("scripts/retinue/ph_trainer", {
 		this.m.Archetype = ::PandorasHobby.Follower.Archetype.Healer;
         this.m.Name = "Apotheosis Incarnate";
         this.m.Description = "";
-		this.m.Image = "ui/events/event_184";
+		this.m.Image = "ui/events/event_181";
 		this.m.Cost = 5000;
 
         this.m.Skill = ::PandorasHobby.Follower.Skill.Alch_Anatomist_3;

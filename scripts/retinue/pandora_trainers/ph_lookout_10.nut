@@ -7,7 +7,8 @@ this.ph_lookout_10 <- this.inherit("scripts/retinue/ph_trainer", {
 		this.m.Archetype = ::PandorasHobby.Follower.Archetype.Ranger;
         this.m.Name = "Scounting 201: High Ground";
         this.m.Description = "";
-		this.m.Image = "ui/campfire/lookout_01";
+		//this.m.Image = "ui/campfire/lookout_01";
+		this.m.Image = "ui/events/event_42";
 		this.m.Cost = 1500;
 
         this.m.Skill = ::PandorasHobby.Follower.Skill.Lookout_High;

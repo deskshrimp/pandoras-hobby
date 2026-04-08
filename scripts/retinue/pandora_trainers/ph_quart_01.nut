@@ -7,7 +7,8 @@ this.ph_quart_01 <- this.inherit("scripts/retinue/ph_trainer", {
 		this.m.Archetype = ::PandorasHobby.Follower.Archetype.Steward;
         this.m.Name = "Advanced Hoarding Techniques";
         this.m.Description = "";
-		this.m.Image = "ui/campfire/quartermaster_01";
+		//this.m.Image = "ui/campfire/quartermaster_01";
+		this.m.Image = "ui/events/event_55";
 		this.m.Cost = 2000;
 
         this.m.Skill = ::PandorasHobby.Follower.Skill.Quart_Storage_2;

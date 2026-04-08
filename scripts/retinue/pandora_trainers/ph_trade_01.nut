@@ -7,7 +7,8 @@ this.ph_trade_01 <- this.inherit("scripts/retinue/ph_trainer", {
 		this.m.Archetype = ::PandorasHobby.Follower.Archetype.Agent;
         this.m.Name = "Finding Hidden Gems";
         this.m.Description = "";
-		this.m.Image = "ui/campfire/trader_01";
+		//this.m.Image = "ui/campfire/trader_01";
+		this.m.Image = "ui/events/event_112";
 		this.m.Cost = 2000;
 
         this.m.Skill = ::PandorasHobby.Follower.Skill.Trader_Shop;

@@ -7,7 +7,8 @@ this.ph_scav_10 <- this.inherit("scripts/retinue/ph_trainer", {
 		this.m.Archetype = ::PandorasHobby.Follower.Archetype.Steward;
         this.m.Name = "Battlefield Scavenger";		
         this.m.Description = "";
-		this.m.Image = "ui/campfire/scavenger_01";
+		//this.m.Image = "ui/campfire/scavenger_01";
+		this.m.Image = "ui/events/event_22";
 		this.m.Cost = 3000;
 
         this.m.Skill = ::PandorasHobby.Follower.Skill.Scav_Scavenge_1;

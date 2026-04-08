@@ -7,7 +7,8 @@ this.ph_medic_00 <- this.inherit("scripts/retinue/ph_trainer", {
 		this.m.Archetype = ::PandorasHobby.Follower.Archetype.Healer;
         this.m.Name = "Medicinal Concoctions";
         this.m.Description = "";
-		this.m.Image = "ui/campfire/surgeon_01";
+		//this.m.Image = "ui/campfire/surgeon_01";
+		this.m.Image = "ui/events/event_184";
 		this.m.Cost = 1000;
 
         this.m.Skill = ::PandorasHobby.Follower.Skill.Medic_Medicine;

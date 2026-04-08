@@ -7,7 +7,8 @@ this.ph_cook_00 <- this.inherit("scripts/retinue/ph_trainer", {
 		this.m.Archetype = ::PandorasHobby.Follower.Archetype.Steward;
         this.m.Name = "Preserve & Persevere";
         this.m.Description = "";
-		this.m.Image = "ui/campfire/cook_01";
+		//this.m.Image = "ui/campfire/cook_01";
+		this.m.Image = "ui/events/event_52";
 		this.m.Cost = 1000;
 
         this.m.Skill = ::PandorasHobby.Follower.Skill.Cook_Preserve;

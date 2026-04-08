@@ -7,7 +7,8 @@ this.ph_nego_01 <- this.inherit("scripts/retinue/ph_trainer", {
 		this.m.Archetype = ::PandorasHobby.Follower.Archetype.Agent;
         this.m.Name = "Maintaining your Rep";
         this.m.Description = "";
-		this.m.Image = "ui/campfire/negotiator_01";
+		//this.m.Image = "ui/campfire/negotiator_01";
+		this.m.Image = "ui/events/event_63";
 		this.m.Cost = 1000;
 
         this.m.Skill = ::PandorasHobby.Follower.Skill.Nego_Decay_1;

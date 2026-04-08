@@ -7,7 +7,8 @@ this.ph_alch_00 <- this.inherit("scripts/retinue/ph_trainer", {
 		this.m.Archetype = ::PandorasHobby.Follower.Archetype.Healer;
         this.m.Name = "101 Ways to Make Snake Oil";
         this.m.Description = "";
-		this.m.Image = "ui/campfire/alchemist_01";
+		//this.m.Image = "ui/campfire/alchemist_01";
+		this.m.Image = "ui/events/event_106";
 		this.m.Cost = 2500;
 
         this.m.Skill = ::PandorasHobby.Follower.Skill.Alch_Snake_Oil_All;

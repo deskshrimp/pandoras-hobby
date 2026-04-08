@@ -7,7 +7,8 @@ this.ph_paymaster_01 <- this.inherit("scripts/retinue/ph_trainer", {
 		this.m.Archetype = ::PandorasHobby.Follower.Archetype.Officer;
 		this.m.Name = "Suppressing Wages";
         this.m.Description = "";
-		this.m.Image = "ui/campfire/paymaster_01";
+		//this.m.Image = "ui/campfire/paymaster_01";
+		this.m.Image = "ui/events/event_04";
 		this.m.Cost = 2500;
 
         this.m.Skill = ::PandorasHobby.Follower.Skill.Paymaster_Disc_2;

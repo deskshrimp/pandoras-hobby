@@ -7,7 +7,8 @@ this.ph_alch_11 <- this.inherit("scripts/retinue/ph_trainer", {
 		this.m.Archetype = ::PandorasHobby.Follower.Archetype.Healer;
         this.m.Name = "Advanced Potions";
         this.m.Description = "";
-		this.m.Image = "ui/campfire/alchemist_01";
+		//this.m.Image = "ui/campfire/alchemist_01";
+		this.m.Image = "ui/events/event_106";
 		this.m.Cost = 2500;
 
         this.m.Skill = ::PandorasHobby.Follower.Skill.Alch_Potions_2;

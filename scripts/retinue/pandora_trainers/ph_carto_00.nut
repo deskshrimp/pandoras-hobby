@@ -7,7 +7,8 @@ this.ph_carto_00 <- this.inherit("scripts/retinue/ph_trainer", {
         this.m.ID = "trainer.ph_carto_00";
         this.m.Name = "Cartography for Profit";
         this.m.Description = "";
-		this.m.Image = "ui/campfire/cartographer_01";
+		//this.m.Image = "ui/campfire/cartographer_01";
+		this.m.Image = "ui/events/event_45";
 		this.m.Cost = 3000;
 
         this.m.Skill = ::PandorasHobby.Follower.Skill.Carto_Pay;        

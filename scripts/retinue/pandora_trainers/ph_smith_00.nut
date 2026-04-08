@@ -7,7 +7,8 @@ this.ph_smith_00 <- this.inherit("scripts/retinue/ph_trainer", {
 		this.m.Archetype = ::PandorasHobby.Follower.Archetype.Steward;
         this.m.Name = "The Art of Gear Repair";		
         this.m.Description = "";
-		this.m.Image = "ui/campfire/blacksmith_01";
+		//this.m.Image = "ui/campfire/blacksmith_01";
+		this.m.Image = "ui/events/event_13";
 		this.m.Cost = 1500;
 
         this.m.Skill = ::PandorasHobby.Follower.Skill.Smith_Repair_Speed;

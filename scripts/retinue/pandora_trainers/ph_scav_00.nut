@@ -7,7 +7,8 @@ this.ph_scav_00 <- this.inherit("scripts/retinue/ph_trainer", {
 		this.m.Archetype = ::PandorasHobby.Follower.Archetype.Steward;
         this.m.Name = "Leave no Trace";		
         this.m.Description = "";
-		this.m.Image = "ui/campfire/scavenger_01";
+		//this.m.Image = "ui/campfire/scavenger_01";
+		this.m.Image = "ui/events/event_86";
 		this.m.Cost = 1500;
 
         this.m.Skill = ::PandorasHobby.Follower.Skill.Scav_RecoverAll;

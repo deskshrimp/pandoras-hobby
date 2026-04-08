@@ -7,7 +7,8 @@ this.ph_raider_01 <- this.inherit("scripts/retinue/ph_trainer", {
 		this.m.Archetype = ::PandorasHobby.Follower.Archetype.Ranger;
         this.m.Name = "Northern Logistics II: Snow!";
         this.m.Description = "";
-		this.m.Image = "ui/campfire/brigand_01";
+		//this.m.Image = "ui/campfire/brigand_01";
+		this.m.Image = "ui/events/event_143";
 		this.m.Cost = 1500;
 
         this.m.Skill = ::PandorasHobby.Follower.Skill.Raider_Snow_2;

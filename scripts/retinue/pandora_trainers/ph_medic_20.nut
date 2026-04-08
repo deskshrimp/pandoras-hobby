@@ -7,7 +7,8 @@ this.ph_medic_20 <- this.inherit("scripts/retinue/ph_trainer", {
 		this.m.Archetype = ::PandorasHobby.Follower.Archetype.Healer;
         this.m.Name = "Emergency Field Medicine";  //"How to Save a Life"
         this.m.Description = "";
-		this.m.Image = "ui/campfire/surgeon_01";
+		//this.m.Image = "ui/campfire/surgeon_01";
+		this.m.Image = "ui/events/event_34";
 		this.m.Cost = 2000;
 
         this.m.Skill = ::PandorasHobby.Follower.Skill.Medic_Survive;

@@ -7,7 +7,8 @@ this.ph_minst_01 <- this.inherit("scripts/retinue/ph_trainer", {
 		this.m.Archetype = ::PandorasHobby.Follower.Archetype.Agent;
         this.m.Name = "Spreading Rumors";
         this.m.Description = "";
-		this.m.Image = "ui/campfire/minstrel_01";
+		//this.m.Image = "ui/campfire/minstrel_01";
+		this.m.Image = "ui/events/event_92";
 		this.m.Cost = 1000;
 
         this.m.Skill = ::PandorasHobby.Follower.Skill.Minstrel_Renown_2;

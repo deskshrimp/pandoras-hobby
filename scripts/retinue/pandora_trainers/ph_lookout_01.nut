@@ -7,7 +7,8 @@ this.ph_lookout_01 <- this.inherit("scripts/retinue/ph_trainer", {
 		this.m.Archetype = ::PandorasHobby.Follower.Archetype.Ranger;
         this.m.Name = "Scouting 102: Reports";		
         this.m.Description = "";
-		this.m.Image = "ui/campfire/lookout_01";
+		//this.m.Image = "ui/campfire/lookout_01";
+		this.m.Image = "ui/events/event_10";
 		this.m.Cost = 2500;
 
         this.m.Skill = ::PandorasHobby.Follower.Skill.Scouting_Report;        

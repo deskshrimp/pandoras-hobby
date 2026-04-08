@@ -7,7 +7,8 @@ this.ph_guide_11 <- this.inherit("scripts/retinue/ph_trainer", {
 		this.m.Archetype = ::PandorasHobby.Follower.Archetype.Ranger;
         this.m.Name = "Hunting & Gathering";
         this.m.Description = "";
-		this.m.Image = "ui/campfire/scout_01";
+		//this.m.Image = "ui/campfire/scout_01";
+		this.m.Image = "ui/events/event_37";
 		this.m.Cost = 2000;
 
         this.m.Skill = ::PandorasHobby.Follower.Skill.Guide_Hunt_All;

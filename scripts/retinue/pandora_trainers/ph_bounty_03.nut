@@ -7,7 +7,8 @@ this.ph_bounty_03 <- this.inherit("scripts/retinue/ph_trainer", {
 		this.m.Archetype = ::PandorasHobby.Follower.Archetype.Officer;		
         this.m.Name = "Champion Hunter";
         this.m.Description = "";
-		this.m.Image = "ui/campfire/bounty_hunter_01";
+		//this.m.Image = "ui/campfire/bounty_hunter_01";
+		this.m.Image = "ui/events/event_122";
 		this.m.Cost = 1500;
 
         this.m.Skill = ::PandorasHobby.Follower.Skill.Bounty_Champ_4;

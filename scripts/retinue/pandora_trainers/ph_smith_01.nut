@@ -7,7 +7,8 @@ this.ph_smith_01 <- this.inherit("scripts/retinue/ph_trainer", {
 		this.m.Archetype = ::PandorasHobby.Follower.Archetype.Steward;
         this.m.Name = "Advaned Smithing";
         this.m.Description = "";
-		this.m.Image = "ui/campfire/blacksmith_01";
+		//this.m.Image = "ui/campfire/blacksmith_01";
+		this.m.Image = "ui/events/event_13";
 		this.m.Cost = 1000;
 
         this.m.Skill = ::PandorasHobby.Follower.Skill.Smith_Recipes;

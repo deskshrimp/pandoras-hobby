@@ -7,7 +7,8 @@ this.ph_recruit_00 <- this.inherit("scripts/retinue/ph_trainer", {
 		this.m.Archetype = ::PandorasHobby.Follower.Archetype.Officer;
 		this.m.Name = "Holding Tryouts";        
         this.m.Description = "";
-		this.m.Image = "ui/campfire/recruiter_01";
+		//this.m.Image = "ui/campfire/recruiter_01";
+		this.m.Image = "ui/events/event_65";
 		this.m.Cost = 2000;
 
         this.m.Skill = ::PandorasHobby.Follower.Skill.Recruiter_Tryout;
