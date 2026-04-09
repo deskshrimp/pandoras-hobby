@@ -5,7 +5,7 @@ this.officer_00_follower <- this.inherit("scripts/retinue/ph_follower_officer", 
 		this.ph_follower_officer.create();
 
         this.m.ID = "follower.ph_officer_00";
-		this.m.Name = "Brat";
+		//this.m.Name = "Brat";
 		this.m.Age = ::PandorasHobby.Follower.Age.Young;
 		this.m.BaseCost = 1500;
 		this.m.Cost = this.m.BaseCost;
@@ -22,7 +22,7 @@ this.officer_00_follower <- this.inherit("scripts/retinue/ph_follower_officer", 
 			}
 		];
 
-		this.m.Image = "ui/campfire/ph_officer_0";
+		//this.m.Image = "ui/campfire/ph_officer_0";
     }
 
 	function onEvaluate()
@@ -41,20 +41,51 @@ this.officer_00_follower <- this.inherit("scripts/retinue/ph_follower_officer", 
 		}		
 	}
 
-	function getDescription()
+	function getBaseName()
 	{
-		if(this.m.Age == ::PandorasHobby.Follower.Age.Young)
+		if (::PandorasFollowers.PACK_ID == "AI" )
 		{
-			return "A brat with a real talent at egging men on.";
-		}
-		else if(this.m.Age == ::PandorasHobby.Follower.Age.Adult)
-		{
-			return "Has a rare talent for goading men into actions they will regret later, yet leaving them with only themselves to blame.";
+			return "Brat";
 		}
 		else
 		{
-			return "A skilled recruited and negotiator. A perfect addition to a growing company.";
-		}		
+			return "Mecks";
+		}
+	}
+
+	function getImagePath()
+	{
+		if (::PandorasFollowers.PACK_ID == "AI" )
+		{
+			return "ui/campfire/ph_officer_0";
+		}
+		else
+		{
+			return "ui/campfire/recruiter_0";
+		}
+	}
+
+	function getDescription()
+	{
+		if (::PandorasFollowers.PACK_ID == "AI" )
+		{
+			if(this.m.Age == ::PandorasHobby.Follower.Age.Young)
+			{
+				return "A brat with a real talent at egging men on.";
+			}
+			else if(this.m.Age == ::PandorasHobby.Follower.Age.Adult)
+			{	
+				return "Has a rare talent for goading men into actions they will regret later, yet leaving them with only themselves to blame.";
+			}
+			else
+			{
+				return "A skilled recruiter1 and negotiator. A perfect addition to a growing company.";
+			}
+		}	
+		else
+		{
+			return "Mecks has a rare talent for goading men into actions they will regret later, yet leaving them with only themselves to blame.";
+		}	
 	}
 
 	function updateEffects()

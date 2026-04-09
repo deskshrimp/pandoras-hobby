@@ -5,7 +5,7 @@ this.officer_11_follower <- this.inherit("scripts/retinue/ph_follower_officer", 
 		this.ph_follower_officer.create();
 
         this.m.ID = "follower.ph_officer_11";
-		this.m.Name = "The Collector";
+		//this.m.Name = "The Collector";
 		this.m.Age = ::PandorasHobby.Follower.Age.Adult;
 		this.m.BaseCost = 4000;
 		this.m.Cost = this.m.BaseCost;
@@ -22,7 +22,7 @@ this.officer_11_follower <- this.inherit("scripts/retinue/ph_follower_officer", 
 			}
 		];
 
-		this.m.Image = "ui/campfire/ph_officer_1";
+		//this.m.Image = "ui/campfire/ph_officer_1";
     }
 
 	function onEvaluate()
@@ -38,16 +38,47 @@ this.officer_11_follower <- this.inherit("scripts/retinue/ph_follower_officer", 
 		}		
 	}
 
-	function getDescription()
+	function getBaseName()
 	{
-		if(this.m.Age == ::PandorasHobby.Follower.Age.Adult)
+		if (::PandorasFollowers.PACK_ID == "AI" )
 		{
-			return "With a disposition as fiery as her mane, The Collector cares only about driving the company to slay the toughest enemies we can find.";
+			return "The Collector";
 		}
 		else
 		{
-			return "You aren't sure where her money comes from or who the fark would buy such grisly trophies, but as long as the company gets a cut, it isn't your problem.";
-		}		
+			return "The Collector";
+		}
+	}
+
+	function getImagePath()
+	{
+		if (::PandorasFollowers.PACK_ID == "AI" )
+		{
+			return "ui/campfire/ph_officer_1";
+		}
+		else
+		{
+			return "ui/campfire/bounty_hunter_0";
+		}
+	}
+
+	function getDescription()
+	{
+		if (::PandorasFollowers.PACK_ID == "AI" )
+		{
+			if(this.m.Age == ::PandorasHobby.Follower.Age.Adult)
+			{
+				return "With a disposition as fiery as her mane, The Collector cares only about driving the company to slay the toughest enemies we can find.";
+			}
+			else
+			{
+				return "You aren't sure where her money comes from or who the fark would buy such grisly trophies, but as long as the company gets a cut, it isn't your problem.";
+			}		
+		}
+		else
+		{
+			return "You aren't sure where his money comes from or who the fark would buy such grisly trophies, but as long as the company gets a cut, it isn't your problem.";
+		}
 	}
 
 	function updateEffects()

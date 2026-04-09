@@ -5,7 +5,7 @@ this.steward_11_follower <- this.inherit("scripts/retinue/ph_follower_steward", 
 		this.ph_follower_steward.create();
 
         this.m.ID = "follower.ph_steward_11";
-		this.m.Name = "Gruel";
+		//this.m.Name = "Gruel";
 		this.m.Age = ::PandorasHobby.Follower.Age.Adult;		
 		this.m.BaseCost = 3000;
 		this.m.Cost = this.m.BaseCost;
@@ -22,7 +22,7 @@ this.steward_11_follower <- this.inherit("scripts/retinue/ph_follower_steward", 
 			}
 		];
 
-		this.m.Image = "ui/campfire/ph_steward_1";
+		//this.m.Image = "ui/campfire/ph_steward_1";
     }
 
 	function onEvaluate()
@@ -59,16 +59,47 @@ this.steward_11_follower <- this.inherit("scripts/retinue/ph_follower_steward", 
 		return num;
 	}
 
-	function getDescription()
+	function getBaseName()
 	{
-		if(this.m.Age == ::PandorasHobby.Follower.Age.Adult)
+		if (::PandorasFollowers.PACK_ID == "AI" )
 		{
-			return "Gruel learned to cook during his days in the militia. Apparently they \'guarded\' a granary.";
+			return "Gruel";
 		}
 		else
 		{
-			return "What Gruel\'s cooking lacks in flavor it makes up for in shelf life. Gruel is a master at stretching your provisions as far as they can go.";
-		}		
+			return "Cookie";
+		}
+	}
+
+	function getImagePath()
+	{
+		if (::PandorasFollowers.PACK_ID == "AI" )
+		{
+			return "ui/campfire/ph_steward_1";
+		}
+		else
+		{
+			return "ui/campfire/cook_0";
+		}
+	}
+
+	function getDescription()
+	{
+		if (::PandorasFollowers.PACK_ID == "AI" )
+		{
+			if(this.m.Age == ::PandorasHobby.Follower.Age.Adult)
+			{
+				return "Gruel learned to cook during his days in the militia. Apparently they \'guarded\' a granary.";
+			}
+			else
+			{
+				return "What Gruel\'s cooking lacks in flavor it makes up for in shelf life. Gruel is a master at stretching your provisions as far as they can go.";
+			}
+		}	
+		else
+		{
+			return "Cookie has a habit of turning everything in poorage, but its still better than anything the men can make.";
+		}	
 	}
 
 	function updateEffects()

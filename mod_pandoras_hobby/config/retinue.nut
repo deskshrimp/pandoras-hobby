@@ -19,7 +19,7 @@
     10000, //Wagon+
 	15000,
     15000, //Big Wagon+
-	30000, //Ultimate Wagon!
+	20000, //Ultimate Wagon!
 ];
 
 //strings.nut
@@ -32,7 +32,7 @@
 	"10,000",
 	"15,000",
 	"15,000",
-	"30,000",
+	"20,000",
 ];
 ::Const.Strings.InventoryHeader <- [
 	"Donkey",

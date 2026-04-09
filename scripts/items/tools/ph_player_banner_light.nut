@@ -1,5 +1,7 @@
 this.ph_player_banner_light <- this.inherit("scripts/items/weapons/weapon", {
-	m = {},
+	m = {
+		RangedDefenseModifier = -5,
+	},
 	function create()
 	{
 		this.weapon.create();
@@ -52,7 +54,26 @@ this.ph_player_banner_light <- this.inherit("scripts/items/weapons/weapon", {
 			icon = "ui/icons/special.png",
 			text = "Allies at a range of 4 tiles or less receive [color=" + this.Const.UI.Color.PositiveValue + "]10%[/color] of the Resolve of the character holding this standard as a bonus, up to a maximum of the standard bearer\'s Resolve."
 		});
+
+		if ( ::Hooks.hasMod("mod_hardened") )
+		{
+			result.push({
+				id = 11,
+				type = "text",
+				icon = "ui/icons/ranged_defense.png",
+				text = ::Reforged.Mod.Tooltips.parseString(::MSU.Text.colorizeValue(this.m.RangedDefenseModifier, {AddSign = true}) + " [Ranged Defense|Concept.RangeDefense]"),
+			});
+		}
+		
 		return result;
+	}
+
+	function onUpdateProperties(_properties)
+	{
+		if ( ::Hooks.hasMod("mod_hardened") )
+		{
+			_properties.RangedDefense += this.m.RangedDefenseModifier;
+		}
 	}
 
 	function getBuyPrice()

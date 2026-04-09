@@ -36,14 +36,32 @@ this.ph_follower <- this.inherit("scripts/retinue/follower", {
 
     function getName()
 	{
-		return this.m.Name + " (" + ::PandorasHobby.Follower.ArchetypeStrings[this.m.Archetype] + ": lvl " + this.m.Level + ")";
+        if (::PandorasFollowers.PACK_ID == "AI" )
+        {
+            return this.getBaseName() + " (" + ::PandorasHobby.Follower.ArchetypeStrings[this.m.Archetype] + ": lvl " + this.m.Level + ")";
+        }
+        else
+        {            
+            return this.getBaseName() + " (" + ::PandorasHobby.Follower.ArchetypeStrings[this.m.Archetype] + ": lvl " + this.m.Level + ") R" + (this.m.Age+1);
+        }		
 	}
+
+    function getBaseName()
+    {
+        return this.m.Name;
+    }
 
     function getImage()
     {
-        if(this.m.LevelsSpent < this.m.Level && !this.isMaxLevel()) return this.m.Image + this.m.Age + "_u";
+        local age = (::PandorasFollowers.PACK_ID == "AI" ) ? this.m.Age : 1;
 
-        return this.m.Image + this.m.Age;
+        if(this.m.LevelsSpent < this.m.Level && !this.isMaxLevel()) return this.getImagePath() + age + "_u";
+        return this.getImagePath() + age;
+    }
+
+    function getImagePath()
+    {
+        return this.m.Image;
     }
 
     function isMaxLevel()

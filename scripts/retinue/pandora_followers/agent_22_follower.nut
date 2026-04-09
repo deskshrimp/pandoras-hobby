@@ -5,7 +5,7 @@ this.agent_22_follower <- this.inherit("scripts/retinue/ph_follower_agent", {
 		this.ph_follower_agent.create();
 
         this.m.ID = "follower.ph_agent_22";
-		this.m.Name = "Joro";
+		//this.m.Name = "Joro";
 		this.m.Age = ::PandorasHobby.Follower.Age.Old;
 		this.m.BaseCost = 8500;
 		this.m.Cost = this.m.BaseCost;
@@ -15,8 +15,6 @@ this.agent_22_follower <- this.inherit("scripts/retinue/ph_follower_agent", {
 
 		this.m.Skills = ::PandorasHobby.Follower.Skill.Joro_Spider | ::PandorasHobby.Follower.Skill.Agent_Settlements | ::PandorasHobby.Follower.Skill.Agent_Caravan | ::PandorasHobby.Follower.Skill.Nego_Negotiation | ::PandorasHobby.Follower.Skill.Nego_Decay_1 | ::PandorasHobby.Follower.Skill.Nego_Decay_2 | ::PandorasHobby.Follower.Skill.Nego_Decay_3;
 
-		this.m.Description = "Joro \'The Spider\' is the daughter of a fallen noble family and a master negotiator who knows how to get what she wants from any merchant or petty noble.";
-
         this.m.Requirements = [
 			{
 				IsSatisfied = false,
@@ -24,7 +22,7 @@ this.agent_22_follower <- this.inherit("scripts/retinue/ph_follower_agent", {
 			}
 		];
 
-		this.m.Image = "ui/campfire/ph_agent_2";
+		//this.m.Image = "ui/campfire/ph_agent_2";
     }
 
 	function onEvaluate()
@@ -63,6 +61,30 @@ this.agent_22_follower <- this.inherit("scripts/retinue/ph_follower_agent", {
 		}
 
 		return false;
+	}
+
+	function getBaseName()
+	{
+		//similar enough, we can share the name
+		return "Joro";
+	}
+
+	function getImagePath()
+	{
+		if (::PandorasFollowers.PACK_ID == "AI" )
+		{
+			return "ui/campfire/ph_agent_2";
+		}
+		else
+		{
+			return "ui/campfire/agent_0";
+		}
+	}
+
+	function getDescription()
+	{
+		//both are female, and can use the same text
+		return "Joro \'The Spider\' is the daughter of a fallen noble family and a master negotiator who knows how to get what she wants from any merchant or petty noble.";
 	}
 
 	function updateEffects()

@@ -5,7 +5,7 @@ this.agent_11_follower <- this.inherit("scripts/retinue/ph_follower_agent", {
 		this.ph_follower_agent.create();
 
         this.m.ID = "follower.ph_agent_11";
-		this.m.Name = "Porter";
+		//this.m.Name = "Porter";
 		this.m.Age = ::PandorasHobby.Follower.Age.Adult;
 		this.m.BaseCost = 6250;
 		this.m.Cost = this.m.BaseCost;
@@ -26,7 +26,7 @@ this.agent_11_follower <- this.inherit("scripts/retinue/ph_follower_agent", {
 			}
 		];
 
-		this.m.Image = "ui/campfire/ph_agent_1";
+		//this.m.Image = "ui/campfire/ph_agent_1";
     }
 
 	function onEvaluate()
@@ -66,16 +66,47 @@ this.agent_11_follower <- this.inherit("scripts/retinue/ph_follower_agent", {
 		}
 	}
 
+	function getBaseName()
+	{
+		if (::PandorasFollowers.PACK_ID == "AI" )
+		{
+			return "Porter";
+		}
+		else
+		{
+			return "Monger";
+		}
+	}
+
+	function getImagePath()
+	{
+		if (::PandorasFollowers.PACK_ID == "AI" )
+		{
+			return "ui/campfire/ph_agent_1";
+		}
+		else
+		{
+			return "ui/campfire/trader_0";
+		}
+	}
+
 	function getDescription()
 	{
-		if(this.m.Age == ::PandorasHobby.Follower.Age.Adult)
+		if (::PandorasFollowers.PACK_ID == "AI" )
 		{
-			return "An experienced porter hand who knows where to find trade goods, and the occasional special trinket.";
+			if(this.m.Age == ::PandorasHobby.Follower.Age.Adult)
+			{
+				return "An experienced porter hand who knows where to find trade goods, and the occasional special trinket.";
+			}
+			else
+			{
+				return "An experienced trader who ensures that merchants don't hold any of their wares back when dealing with the company.";
+			}
 		}
 		else
 		{
 			return "An experienced trader who ensures that merchants don't hold any of their wares back when dealing with the company.";
-		}		
+		}	
 	}
 
 	function updateEffects()

@@ -5,7 +5,7 @@ this.steward_22_follower <- this.inherit("scripts/retinue/ph_follower_steward", 
 		this.ph_follower_steward.create();
 
         this.m.ID = "follower.ph_steward_22";
-		this.m.Name = "Tinker";
+		//this.m.Name = "Tinker";
 		this.m.Age = ::PandorasHobby.Follower.Age.Old;
 		this.m.BaseCost = 7500;
 		this.m.Cost = this.m.BaseCost;
@@ -15,7 +15,7 @@ this.steward_22_follower <- this.inherit("scripts/retinue/ph_follower_steward", 
 
 		this.m.Skills = ::PandorasHobby.Follower.Skill.Tool_Storage | ::PandorasHobby.Follower.Skill.Scav_RecoverAll | ::PandorasHobby.Follower.Skill.Scav_Scavenge_1 | ::PandorasHobby.Follower.Skill.Smith_Repair_Speed | ::PandorasHobby.Follower.Skill.Smith_Recipes;
 
-		this.m.Description = "Possessed by curiosity and a seemingly limitless number of pockets, Tinker is an experienced craftsman looking for some fresh air and new trinkets to work on.";
+		//this.m.Description = "Possessed by curiosity and a seemingly limitless number of pockets, Tinker is an experienced craftsman looking for some fresh air and new trinkets to work on.";
 
         this.m.Requirements = [
 			{
@@ -28,7 +28,7 @@ this.steward_22_follower <- this.inherit("scripts/retinue/ph_follower_steward", 
 			}
 		];
 
-		this.m.Image = "ui/campfire/ph_steward_2";
+		//this.m.Image = "ui/campfire/ph_steward_2";
     }
 
 	function onEvaluate()
@@ -53,6 +53,28 @@ this.steward_22_follower <- this.inherit("scripts/retinue/ph_follower_steward", 
 			this.m.Cost += 1000;
 			this.m.Requirements[1].Text += " [+1000]";
 		}
+	}
+
+	function getBaseName()
+	{
+		return "Tinker";
+	}
+
+	function getImagePath()
+	{
+		if (::PandorasFollowers.PACK_ID == "AI" )
+		{
+			return "ui/campfire/ph_steward_2";
+		}
+		else
+		{
+			return "ui/campfire/blacksmith_0";
+		}
+	}
+
+	function getDescription()
+	{
+		return "Possessed by curiosity and a seemingly limitless number of pockets, Tinker is an experienced craftsman looking for some fresh air and new trinkets to work on.";
 	}
 
 	function updateEffects()

@@ -5,7 +5,7 @@ this.ranger_00_follower <- this.inherit("scripts/retinue/ph_follower_ranger", {
 		this.ph_follower_ranger.create();
 
         this.m.ID = "follower.ph_ranger_00";
-		this.m.Name = "Pup";
+		//this.m.Name = "Pup";
 		this.m.Age = ::PandorasHobby.Follower.Age.Young;
 		this.m.BaseCost = 1500;
 		this.m.Cost = this.m.BaseCost;		
@@ -22,28 +22,59 @@ this.ranger_00_follower <- this.inherit("scripts/retinue/ph_follower_ranger", {
 			}
 		];
 
-		this.m.Image = "ui/campfire/ph_ranger_0";
+		//this.m.Image = "ui/campfire/ph_ranger_0";
     }
 
-	function getDescription()
+	function onEvaluate()
+	{		
+		this.m.Requirements[0].IsSatisfied = true;
+	}
+
+	function getBaseName()
 	{
-		if(this.m.Age == ::PandorasHobby.Follower.Age.Young)
+		if (::PandorasFollowers.PACK_ID == "AI" )
 		{
-			return "A couple of young pups with more energy than skill.";
-		}
-		else if(this.m.Age == ::PandorasHobby.Follower.Age.Adult)
-		{
-			return "A couple of fine young pups that can sometimes feed themselves.";
+			return "Pup";
 		}
 		else
 		{
-			return "Pup and his pups only really care about food. An honest pursuit.";
-		}		
+			return "Poacher";
+		}
 	}
 
-    function onEvaluate()
-	{		
-		this.m.Requirements[0].IsSatisfied = true;
+	function getImagePath()
+	{
+		if (::PandorasFollowers.PACK_ID == "AI" )
+		{
+			return "ui/campfire/ph_ranger_0";
+		}
+		else
+		{
+			return "ui/campfire/scout_0";
+		}
+	}
+
+	function getDescription()
+	{
+		if (::PandorasFollowers.PACK_ID == "AI" )
+		{
+			if(this.m.Age == ::PandorasHobby.Follower.Age.Young)
+			{
+				return "A couple of young pups with more energy than skill.";
+			}
+			else if(this.m.Age == ::PandorasHobby.Follower.Age.Adult)
+			{
+				return "A couple of fine young pups that can sometimes feed themselves.";
+			}
+			else
+			{
+				return "Pup and his pups only really care about food. An honest pursuit.";
+			}
+		}	
+		else
+		{
+			return "Mercenaries love fresh meat, and aren't too concerned about who owns the land. Poacher feels the same way.";
+		}	
 	}
 
 	function updateEffects()

@@ -5,7 +5,7 @@ this.steward_00_follower <- this.inherit("scripts/retinue/ph_follower_steward", 
 		this.ph_follower_steward.create();
 
         this.m.ID = "follower.ph_steward_00";
-		this.m.Name = "Fish";
+		//this.m.Name = "Fish";
 		this.m.Age = ::PandorasHobby.Follower.Age.Young;		
 		this.m.BaseCost = 1250;
 		this.m.Cost = this.m.BaseCost;
@@ -22,7 +22,7 @@ this.steward_00_follower <- this.inherit("scripts/retinue/ph_follower_steward", 
 			}
 		];
 
-		this.m.Image = "ui/campfire/ph_steward_0";
+		//this.m.Image = "ui/campfire/ph_steward_0";
     }
 
 	function onEvaluate()
@@ -38,20 +38,51 @@ this.steward_00_follower <- this.inherit("scripts/retinue/ph_follower_steward", 
 		}		
 	}
 
-	function getDescription()
+	function getBaseName()
 	{
-		if(this.m.Age == ::PandorasHobby.Follower.Age.Young)
+		if (::PandorasFollowers.PACK_ID == "AI" )
 		{
-			return "A young fisherboy who knows how to work with nets.";
-		}
-		else if(this.m.Age == ::PandorasHobby.Follower.Age.Adult)
-		{
-			return "An adventurous lad who chose a life of chasing after mercenaries instead of working the docks.";
+			return "Fish";
 		}
 		else
 		{
-			return "Fish left the docks long ago, but the docks never left him. He's the finest net-maker you'll ever find.";
-		}		
+			return "Fish";
+		}
+	}
+
+	function getImagePath()
+	{
+		if (::PandorasFollowers.PACK_ID == "AI" )
+		{
+			return "ui/campfire/ph_steward_0";
+		}
+		else
+		{
+			return "ui/campfire/scavenger_0";
+		}
+	}
+
+	function getDescription()
+	{
+		if (::PandorasFollowers.PACK_ID == "AI" )
+		{
+			if(this.m.Age == ::PandorasHobby.Follower.Age.Young)
+			{
+				return "A young fisherboy who knows how to work with nets.";
+			}
+			else if(this.m.Age == ::PandorasHobby.Follower.Age.Adult)
+			{
+				return "An adventurous lad who chose a life of chasing after mercenaries instead of working the docks.";
+			}
+			else
+			{
+				return "Fish left the docks long ago, but the docks never left him. He's the finest net-maker you'll ever find.";
+			}		
+		}
+		else
+		{
+			return "A young fisherboy who knows how to work with nets. He also has an idea for a new type of net.";
+		}
 	}
 
 	function updateEffects()

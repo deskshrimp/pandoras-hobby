@@ -5,7 +5,7 @@ this.ranger_11_follower <- this.inherit("scripts/retinue/ph_follower_ranger", {
 		this.ph_follower_ranger.create();
 
         this.m.ID = "follower.ph_ranger_11";
-		this.m.Name = "Rambler";
+		//this.m.Name = "Rambler";
 		this.m.Age = ::PandorasHobby.Follower.Age.Adult;
 		this.m.BaseCost = 3500;
 		this.m.Cost = this.m.BaseCost;
@@ -26,7 +26,7 @@ this.ranger_11_follower <- this.inherit("scripts/retinue/ph_follower_ranger", {
 			}
 		];
 
-		this.m.Image = "ui/campfire/ph_ranger_1";
+		//this.m.Image = "ui/campfire/ph_ranger_1";
     }
 
     function onEvaluate()
@@ -53,14 +53,45 @@ this.ranger_11_follower <- this.inherit("scripts/retinue/ph_follower_ranger", {
 		}
 	}
 
+	function getBaseName()
+	{
+		if (::PandorasFollowers.PACK_ID == "AI" )
+		{
+			return "Rambler";
+		}
+		else
+		{
+			return "Rambler";
+		}
+	}
+
+	function getImagePath()
+	{
+		if (::PandorasFollowers.PACK_ID == "AI" )
+		{
+			return "ui/campfire/ph_ranger_1";
+		}
+		else
+		{
+			return "ui/campfire/lookout_0";
+		}
+	}
+
 	function getDescription()
 	{
-		if(this.m.Age == ::PandorasHobby.Follower.Age.Adult)
+		if (::PandorasFollowers.PACK_ID == "AI" )
 		{
-			return "A skilled young caravan hand who grew bored of staying on the roads.";
-		}
+			if(this.m.Age == ::PandorasHobby.Follower.Age.Adult)
+			{
+				return "A skilled young caravan hand who grew bored of staying on the roads.";
+			}		
 		
-		return "Rambler always finds the path that's a bit smoother than the rest.";				
+			return "Rambler always finds the path that's a bit smoother than the rest.";
+		}
+		else
+		{
+			return "Rambler always finds the path that's a bit smoother than the rest.";
+		}
 	}
 
 	function updateEffects()

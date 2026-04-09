@@ -5,7 +5,7 @@ this.healer_00_follower <- this.inherit("scripts/retinue/ph_follower_healer", {
 		this.ph_follower_healer.create();
 
         this.m.ID = "follower.ph_healer_00";
-		this.m.Name = "Foundling";
+		//this.m.Name = "Foundling";
 		this.m.Age = ::PandorasHobby.Follower.Age.Young;		
 		this.m.BaseCost = 1500;
 		this.m.Cost = this.m.BaseCost;
@@ -22,7 +22,7 @@ this.healer_00_follower <- this.inherit("scripts/retinue/ph_follower_healer", {
 			}
 		];
 
-		this.m.Image = "ui/campfire/ph_healer_0";
+		//this.m.Image = "ui/campfire/ph_healer_0";
     }
 
 	function onEvaluate()
@@ -38,20 +38,51 @@ this.healer_00_follower <- this.inherit("scripts/retinue/ph_follower_healer", {
 		}
 	}
 
-	function getDescription()
+	function getBaseName()
 	{
-		if(this.m.Age == ::PandorasHobby.Follower.Age.Young)
+		if (::PandorasFollowers.PACK_ID == "AI" )
 		{
-			return "A young foundling who was left at the temple. With time & training he could become an asset.";
-		}
-		else if(this.m.Age == ::PandorasHobby.Follower.Age.Adult)
-		{
-			return "A fine young man who has honed the skills he learned at the Temple.";
+			return "Foundling";
 		}
 		else
 		{
-			return "Foundling knows how to pack more medicine into every man's kit, an asset for any mercenary company.";
-		}		
+			return "Foundling";
+		}
+	}
+
+	function getImagePath()
+	{
+		if (::PandorasFollowers.PACK_ID == "AI" )
+		{
+			return "ui/campfire/ph_healer_0";
+		}
+		else
+		{
+			return "ui/campfire/quartermaster_0";
+		}
+	}
+
+	function getDescription()
+	{
+		if (::PandorasFollowers.PACK_ID == "AI" )
+		{		
+			if(this.m.Age == ::PandorasHobby.Follower.Age.Young)
+			{
+				return "A young foundling who was left at the temple. With time & training he could become an asset.";
+			}
+			else if(this.m.Age == ::PandorasHobby.Follower.Age.Adult)
+			{
+				return "A fine young man who has honed the skills he learned at the Temple.";
+			}
+			else
+			{
+				return "Foundling knows how to pack more medicine into every man's kit, an asset for any mercenary company.";
+			}
+		}
+		else
+		{
+			return "Foundling was abandoned at a Temple as a babe and he spent his time there as an errand boy. He can neatly fold and stuff extra bandages into every man's kit, and is primed to continue training as a healer.";
+		}
 	}
 
 	function updateEffects()

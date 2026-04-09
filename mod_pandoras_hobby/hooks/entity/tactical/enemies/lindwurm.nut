@@ -10,9 +10,8 @@
 		this.getSprite("miniboss").setBrush("bust_miniboss");
         
         local baseProperties = this.m.BaseProperties;
-        baseProperties.Hitpoints += 100;        
-        baseProperties.RangedDefense += 5;
-        baseProperties.Initiative += 10;
+        baseProperties.Hitpoints += 100;
+        baseProperties.Initiative += 20;
         
         //add some snake-y perks
         this.getSkills().add(::new("scripts/skills/perks/perk_anticipation"));

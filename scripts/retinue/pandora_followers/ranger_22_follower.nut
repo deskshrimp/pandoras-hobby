@@ -5,7 +5,7 @@ this.ranger_22_follower <- this.inherit("scripts/retinue/ph_follower_ranger", {
 		this.ph_follower_ranger.create();
 
         this.m.ID = "follower.ph_ranger_22";
-		this.m.Name = "Old Bear";
+		//this.m.Name = "Old Bear";
 		this.m.Age = ::PandorasHobby.Follower.Age.Old;
 		this.m.BaseCost = 6000;
 		this.m.Cost = this.m.BaseCost;
@@ -15,7 +15,7 @@ this.ranger_22_follower <- this.inherit("scripts/retinue/ph_follower_ranger", {
 
 		this.m.Skills = ::PandorasHobby.Follower.Skill.OldBear_Ammo | ::PandorasHobby.Follower.Skill.Raider_Snow_1 | ::PandorasHobby.Follower.Skill.Raider_Snow_2;
 
-		this.m.Description = "A retired barbarian raider is a rare bird, but Old Bear wasn't in a hurry to see Valahlla.";
+		//this.m.Description = "A retired barbarian raider is a rare bird, but Old Bear wasn't in a hurry to see Valahlla.";
 
         this.m.Requirements = [
 			{
@@ -24,12 +24,34 @@ this.ranger_22_follower <- this.inherit("scripts/retinue/ph_follower_ranger", {
 			}
 		];
 
-		this.m.Image = "ui/campfire/ph_ranger_2";
+		//this.m.Image = "ui/campfire/ph_ranger_2";
     }
 
     function onEvaluate()
 	{
 		this.m.Requirements[0].IsSatisfied = true;
+	}
+
+	function getBaseName()
+	{
+		return "Old Bear";
+	}
+
+	function getImagePath()
+	{
+		if (::PandorasFollowers.PACK_ID == "AI" )
+		{
+			return "ui/campfire/ph_ranger_2";
+		}
+		else
+		{
+			return "ui/campfire/brigand_0";
+		}
+	}
+
+	function getDescription()
+	{
+		return "A retired barbarian raider is a rare bird, but Old Bear wasn't in a hurry to see Valahlla.";
 	}
 
 	function updateEffects()

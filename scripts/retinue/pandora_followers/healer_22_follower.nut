@@ -5,7 +5,7 @@ this.healer_22_follower <- this.inherit("scripts/retinue/ph_follower_healer", {
 		this.ph_follower_healer.create();
 
         this.m.ID = "follower.ph_healer_22";
-		this.m.Name = "Spook";
+		//this.m.Name = "Spook";
 		this.m.Age = ::PandorasHobby.Follower.Age.Old;
 		this.m.BaseCost = 8000;
 		this.m.Cost = this.m.BaseCost;
@@ -15,7 +15,7 @@ this.healer_22_follower <- this.inherit("scripts/retinue/ph_follower_healer", {
 
 		this.m.Skills = ::PandorasHobby.Follower.Skill.True_Cultist | ::PandorasHobby.Follower.Skill.Alch_Snake_Oil_All | ::PandorasHobby.Follower.Skill.Alch_Cultist;
 
-		this.m.Description = "Spook is surprisingly skilled follower. His obsession with Davkul can really grate on you though.";
+		//this.m.Description = "Spook is surprisingly skilled follower. His obsession with Davkul can really grate on you though.";
 
         this.m.Requirements = [
 			{
@@ -28,7 +28,7 @@ this.healer_22_follower <- this.inherit("scripts/retinue/ph_follower_healer", {
 			}
 		];
 
-		this.m.Image = "ui/campfire/ph_healer_2";
+		//this.m.Image = "ui/campfire/ph_healer_2";
     }
 
 	function onEvaluate()
@@ -62,6 +62,28 @@ this.healer_22_follower <- this.inherit("scripts/retinue/ph_follower_healer", {
 			this.m.Cost += 1000;
 			this.m.Requirements[1].Text += " [+1000]";
 		}
+	}
+
+	function getBaseName()
+	{
+		return "Spook";
+	}
+
+	function getImagePath()
+	{
+		if (::PandorasFollowers.PACK_ID == "AI" )
+		{
+			return "ui/campfire/ph_healer_2";
+		}
+		else
+		{
+			return "ui/campfire/negotiator_0";
+		}
+	}
+
+	function getDescription()
+	{
+		return "Spook is a surprisingly skilled follower. His obsession with Davkul can really grate on you though.";
 	}
 
 	function updateEffects()

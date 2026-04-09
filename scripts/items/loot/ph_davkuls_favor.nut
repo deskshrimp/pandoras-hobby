@@ -20,7 +20,7 @@ this.ph_davkuls_favor <- this.inherit("scripts/items/ph_personalized_item", {
 
     function updateVariant()
 	{
-		if(Variant > 100)
+		if(this.m.Variant > 100)
 		{
 			//from the sacrifice event
 			this.m.Description = this.m.BrothersName + " was strong with Davkul. This terrible gift from Davkul must be used in accordance with his will."

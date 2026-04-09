@@ -5,7 +5,7 @@ this.healer_11_follower <- this.inherit("scripts/retinue/ph_follower_healer", {
 		this.ph_follower_healer.create();
 
         this.m.ID = "follower.ph_healer_11";
-		this.m.Name = "Quack";
+		//this.m.Name = "Quack";
 		this.m.Age = ::PandorasHobby.Follower.Age.Adult;
 		this.m.BaseCost = 3500;
 		this.m.Cost = this.m.BaseCost;
@@ -26,7 +26,7 @@ this.healer_11_follower <- this.inherit("scripts/retinue/ph_follower_healer", {
 			}
 		];
 
-		this.m.Image = "ui/campfire/ph_healer_1";
+		//this.m.Image = "ui/campfire/ph_healer_1";
     }
 
 	function onEvaluate()
@@ -58,16 +58,47 @@ this.healer_11_follower <- this.inherit("scripts/retinue/ph_follower_healer", {
 		}
 	}
 
-	function getDescription()
+	function getBaseName()
 	{
-		if(this.m.Age == ::PandorasHobby.Follower.Age.Adult)
+		if (::PandorasFollowers.PACK_ID == "AI" )
 		{
-			return "A trained physician looking to put his skills to use in the field.";
+			return "Quack";
 		}
 		else
 		{
-			return "A true master of his craft, but the men still give him a hard time.";
-		}		
+			return "Quack";
+		}
+	}
+
+	function getImagePath()
+	{
+		if (::PandorasFollowers.PACK_ID == "AI" )
+		{
+			return "ui/campfire/ph_healer_1";
+		}
+		else
+		{
+			return "ui/campfire/surgeon_0";
+		}
+	}
+
+	function getDescription()
+	{
+		if (::PandorasFollowers.PACK_ID == "AI" )
+		{
+			if(this.m.Age == ::PandorasHobby.Follower.Age.Adult)
+			{
+				return "A trained physician looking to put his skills to use in the field.";
+			}
+			else
+			{
+				return "A true master of his craft, but the men still give him a hard time.";
+			}
+		}
+		else
+		{
+			return "A trained physician looking to put his skills to use in the field.";
+		}
 	}
 
 	function updateEffects()

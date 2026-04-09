@@ -16,29 +16,3 @@
 {    
     width: 47.0rem;
 }
-
-.world-campfire-screen > .l-main-dialog-container .slot0
-{    
-    left: 25.0rem;    
-}
-
-.world-campfire-screen > .l-main-dialog-container .slot1
-{    
-    left: 47.0rem;    
-}
-
-.world-campfire-screen > .l-main-dialog-container .slot2
-{    
-    left: -5.0rem;
-}
-
-.world-campfire-screen > .l-main-dialog-container .slot3
-{    
-    bottom: -8.0rem;
-}
-
-.world-campfire-screen > .l-main-dialog-container .slot4
-{    
-    left: 57.0rem;
-    bottom: 0.0rem;
-}
