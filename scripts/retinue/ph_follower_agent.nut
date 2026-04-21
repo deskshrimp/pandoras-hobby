@@ -154,7 +154,7 @@ this.ph_follower_agent <- this.inherit("scripts/retinue/ph_follower", {
 
     function onGetShopRarityMult()
     {
-        return this.getShopRarityBonus() * 0.01;
+        return (1.0 + this.getShopRarityBonus() * 0.01);
     }
 
     function getShopRarityBonus()
