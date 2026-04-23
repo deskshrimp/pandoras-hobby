@@ -63,13 +63,16 @@
 		}
 
         //now apply the reductions from the Doctor follower
-        if(::World.Retinue.PH_getFollowerAtIndex(::PandorasHobby.Follower.Archetype.Healer).getAge() == ::PandorasHobby.Follower.Age.Adult)
+        if( ::World.Retinue.PH_HasFollowerTypeWithSkill(::PandorasHobby.Follower.Archetype.Healer, ::PandorasHobby.Follower.Skill.Less_Infection) )
         {
-            this.m.Score *= 0.5;
-        }
-        else if(::World.Retinue.PH_getFollowerAtIndex(::PandorasHobby.Follower.Archetype.Healer).getAge() == ::PandorasHobby.Follower.Age.Old)
-        {
-            this.m.Score *= 0.3;
+            if(::World.Retinue.PH_getFollowerAtIndex(::PandorasHobby.Follower.Archetype.Healer).getAge() == ::PandorasHobby.Follower.Age.Adult)
+            {
+                this.m.Score *= 0.5;
+            }
+            else if(::World.Retinue.PH_getFollowerAtIndex(::PandorasHobby.Follower.Archetype.Healer).getAge() == ::PandorasHobby.Follower.Age.Old)
+            {
+                this.m.Score *= 0.3;
+            }
         }
     }
 });
