@@ -14,7 +14,7 @@ this.ph_lookout_00 <- this.inherit("scripts/retinue/ph_trainer", {
         this.m.Skill = ::PandorasHobby.Follower.Skill.Scouting_Vision;        
 
 		this.m.Effects = [
-			"25% increased footprint view radius",
+			"30% increased footprint view radius",
 			"Extended footprint information",
 		];
 

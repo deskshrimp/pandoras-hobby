@@ -214,13 +214,13 @@ this.ph_follower_officer <- this.inherit("scripts/retinue/ph_follower", {
 		    ::World.Assets.m.RosterSizeAdditionalMax += 3;
 		    ::World.Assets.m.TryoutPriceMult *= 0.5;
         }
-
+                
         if(this.hasSkill(::PandorasHobby.Follower.Skill.Paymaster_Disc_2))
         {
             ::World.Assets.m.DailyWageMult *= 0.75;
         }
         else if(this.hasSkill(::PandorasHobby.Follower.Skill.Paymaster_Disc_1))
-        {
+        {            
             ::World.Assets.m.DailyWageMult *= 0.85;
         }
 

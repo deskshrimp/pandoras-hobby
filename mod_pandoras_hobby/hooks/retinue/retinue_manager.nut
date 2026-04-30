@@ -146,6 +146,9 @@
 	q.upgradeFollower <- function( _slot, _follower ) {
 		//upgrade the matching follower!
 		this.m.Slots[_follower.getArchetype()].learnSkill(_follower.getSkill());
+		
+		//same call made when hiring to force an update
+		this.World.Assets.resetToDefaults();
 	}
 
 	q.getFollower = @(__original) function( _id ) {
