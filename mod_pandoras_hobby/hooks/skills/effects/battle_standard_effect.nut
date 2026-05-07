@@ -33,7 +33,7 @@
 			}
             
             //use our new property to check instead of checkking IDs
-			if (ally.getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand) != null && ally.getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand).hasProperty(::Const.Items.Property.PlayerBattleStandard) )
+			if ( this.PH_hasBanner(ally) )
 			{
 				if (ally.getBravery() > bestBravery)
 				{
@@ -49,4 +49,18 @@
 
 		return bestBravery;
     }
+
+	//a more involved method to handle the check the IDs in case another mod interferes with the property
+	q.PH_hasBanner <- function( _ally )
+	{
+		if( _ally.getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand) == null) return false;
+
+		if( _ally.getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand).hasProperty(::Const.Items.Property.PlayerBattleStandard) ) return true;
+
+		if( _ally.getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand).getID() == "weapon.player_banner" ) return true;
+		if( _ally.getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand).getID() == "weapon.ph_player_banner_light" ) return true;
+		if( _ally.getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand).getID() == "weapon.ph_player_banner_heavy" ) return true;
+
+		return false;
+	}
 });
