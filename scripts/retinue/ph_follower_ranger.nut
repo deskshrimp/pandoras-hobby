@@ -224,8 +224,6 @@ this.ph_follower_ranger <- this.inherit("scripts/retinue/ph_follower", {
 		if (autoAttack.isHiddenToPlayer()) return false;
 		if (autoAttack.isAlliedWithPlayer()) return false;
 
-        ::logDebug("DEBUG: HOT PURSUIT!!");
-
 		return true;
     }
 
