@@ -191,7 +191,9 @@
 		else if(_id == "follower.agent")
 		{
 			//Used for showing settlement info (checked on hover?)
-			return this.PH_HasFollowerTypeWithSkill(::PandorasHobby.Follower.Archetype.Agent, ::PandorasHobby.Follower.Skill.Agent_Settlements);
+			//return this.PH_HasFollowerTypeWithSkill(::PandorasHobby.Follower.Archetype.Agent, ::PandorasHobby.Follower.Skill.Agent_Settlements);
+			//revert to vanilla call to avoid issues with location tooltips.
+			return __original( _id );
 		}
 		else if(_id == "follower.scout")
 		{
