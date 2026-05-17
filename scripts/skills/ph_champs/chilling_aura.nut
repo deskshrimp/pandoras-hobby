@@ -1,16 +1,23 @@
 this.chilling_aura <- this.inherit("scripts/skills/skill", {
-	m = {},
+	m = {
+		SnowTiles = []
+	},
 	function create()
 	{
 		this.m.ID = "special.chilling_aura";
 		this.m.Name = "Chilling Aura";
-		this.m.Description = "This creature is so cold its snowing!";
+		this.m.Description = "This creature drains the all the warmth from its surroundings.";
 		this.m.Icon = "skills/status_effect_109.png";
 		this.m.Type = this.Const.SkillType.Special;
         this.m.Order = this.Const.SkillOrder.Perk;
 		this.m.IsActive = false;
 		this.m.IsStacking = false;
 		this.m.IsHidden = false;
+
+		for( local i = 1; i <= 3; i = ++i )
+		{
+			this.m.SnowTiles.push(this.MapGen.get("tactical.tile.snow" + i));
+		}
 	}
 
 	function onTurnEnd()
