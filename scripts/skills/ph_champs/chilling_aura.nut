@@ -19,7 +19,7 @@ this.chilling_aura <- this.inherit("scripts/skills/skill", {
         if( user == null || user.isNull() ) return;
 
         //make some snow!
-        local myTile = _user.getTile();
+        local myTile = user.getTile();
 		for( local i = 0; i < 6; i = ++i )
 		{
 			if ( !myTile.hasNextTile(i) )
