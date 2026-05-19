@@ -8,8 +8,8 @@ this.chilling_aura <- this.inherit("scripts/skills/skill", {
 		this.m.Name = "Chilling Aura";
 		this.m.Description = "This creature drains the all the warmth from its surroundings.";
 		this.m.Icon = "skills/status_effect_109.png";
-		this.m.Type = this.Const.SkillType.Special;
-        this.m.Order = this.Const.SkillOrder.Perk;
+		this.m.Type = ::Const.SkillType.Special;
+        this.m.Order = ::Const.SkillOrder.Perk;
 		this.m.IsActive = false;
 		this.m.IsStacking = false;
 		this.m.IsHidden = false;
@@ -42,7 +42,7 @@ this.chilling_aura <- this.inherit("scripts/skills/skill", {
 					nextTile.getEntity().getSkills().add( ::new("scripts/skills/effects/chilled_effect") );
 				}
 
-				if ( nextTile.Subtype != this.Const.Tactical.TerrainSubtype.Snow && nextTile.Subtype != this.Const.Tactical.TerrainSubtype.LightSnow )
+				if ( nextTile.Subtype != ::Const.Tactical.TerrainSubtype.Snow && nextTile.Subtype != ::Const.Tactical.TerrainSubtype.LightSnow )
 				{
 					this.Time.scheduleEvent( this.TimeUnit.Virtual, 350, function ( _data )
 					{
@@ -64,7 +64,7 @@ this.chilling_aura <- this.inherit("scripts/skills/skill", {
 			}
 		}
 
-		if (myTile.Subtype != this.Const.Tactical.TerrainSubtype.Snow && myTile.Subtype != this.Const.Tactical.TerrainSubtype.LightSnow)
+		if (myTile.Subtype != ::Const.Tactical.TerrainSubtype.Snow && myTile.Subtype != ::Const.Tactical.TerrainSubtype.LightSnow)
 		{
 			this.Time.scheduleEvent(this.TimeUnit.Virtual, 350, function ( _data )
 			{
@@ -84,7 +84,13 @@ this.chilling_aura <- this.inherit("scripts/skills/skill", {
 			});
 		}
 
-        this.Tactical.spawnParticleEffect(false, this.Const.Tactical.SpiritWalkEndParticles[i].Brushes, _entity.getTile(), this.Const.Tactical.SpiritWalkEndParticles[i].Delay, this.Const.Tactical.SpiritWalkEndParticles[i].Quantity, this.Const.Tactical.SpiritWalkEndParticles[i].LifeTimeQuantity, this.Const.Tactical.SpiritWalkEndParticles[i].SpawnRate, this.Const.Tactical.SpiritWalkEndParticles[i].Stages);
+        if (::Const.Tactical.SpiritWalkStartParticles.len() != 0)
+		{
+			for( local i = 0; i < ::Const.Tactical.SpiritWalkStartParticles.len(); i = ++i )
+			{
+				this.Tactical.spawnParticleEffect(false, ::Const.Tactical.SpiritWalkStartParticles[i].Brushes, user.getTile(), ::Const.Tactical.SpiritWalkStartParticles[i].Delay, ::Const.Tactical.SpiritWalkStartParticles[i].Quantity, ::Const.Tactical.SpiritWalkStartParticles[i].LifeTimeQuantity, ::Const.Tactical.SpiritWalkStartParticles[i].SpawnRate, ::Const.Tactical.SpiritWalkStartParticles[i].Stages);
+			}
+		}
 	}
 });
 
