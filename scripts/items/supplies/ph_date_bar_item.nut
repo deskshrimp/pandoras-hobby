@@ -7,7 +7,7 @@ this.ph_date_bar_item <- this.inherit("scripts/items/supplies/food_item", {
 		this.m.Name = "Date Bar";
 		this.m.Description = "Provisions. Dried dates mixed with dried fruit and berries. South meets North in a bar.";
 		this.m.Icon = "supplies/ph_inventory_date_bar.png";
-		this.m.Value = 80;
+		this.m.Value = 90;
 		this.m.GoodForDays = 12;
 	}
 

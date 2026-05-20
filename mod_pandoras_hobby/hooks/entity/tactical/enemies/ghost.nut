@@ -15,6 +15,7 @@
         baseProperties.IsImmuneToDamageReflection = true;
         baseProperties.MeleeSkill += 10;        
         baseProperties.ActionPoints += 1;
+        baseProperties.Hitpoints = 100;
 
         //add new skills        
         this.getSkills().add(::new("scripts/skills/ph_champs/ethereal"));
@@ -59,13 +60,28 @@
                 {
                     this.PH_AttemptIncompletePotionDrop( ret, "geist", ::Const.Items.PH_ReducedPotionDropRate );
                 }
-                else
-                {
-                    ret.push(::new("scripts/items/loot/rf_geist_tear_item"));
-                }
             }
 		}
 
 		return ret;
+    }
+
+    q.getTooltip = @(__original) function ( _targetedWithSkill = null )
+    {
+        local ret = __original(_targetedWithSkill);
+
+        if(ret.len() < 2) return ret;
+
+        foreach( item in ret )
+        {
+            if(item.icon == "ui/icons/health.png")
+            {
+                item.icon = "ui/icons/ph_ethereal_icon.png";
+                item.text = "Spirit";
+                break;
+            }
+        }
+
+        return ret;
     }
 });

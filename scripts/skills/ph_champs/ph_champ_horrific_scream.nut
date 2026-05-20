@@ -72,12 +72,12 @@ this.ph_champ_horrific_scream <- this.inherit("scripts/skills/skill", {
     {
         //ensure there is someone there and that they are within the height allowance
 
-        if (!tile.IsOccupiedByActor || tile.getEntity().isAlliedWith(_user)) { return; }
+        if (!_tile.IsOccupiedByActor || _tile.getEntity().isAlliedWith(_user)) { return; }
         
         if(_heightDiff > this.m.MaxLevelDifference) { return; }
 
         //then scream at them
-        tile.getEntity().checkMorale(-1, _diff + _heightDiff, ::Const.MoraleCheckType.MentalAttack);
+        _tile.getEntity().checkMorale(-1, _diff + _heightDiff, ::Const.MoraleCheckType.MentalAttack);
     }
 });
 

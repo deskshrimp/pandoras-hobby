@@ -7,7 +7,7 @@ this.ph_jerky_item <- this.inherit("scripts/items/supplies/food_item", {
 		this.m.Name = "Jerky";
 		this.m.Description = "Provisions. Dried and seasoned mystery meat. It's food, don't think about it too much.";
 		this.m.Icon = "supplies/ph_inventory_jerky.png";
-		this.m.Value = 75;
+		this.m.Value = 120;
 		this.m.GoodForDays = 16;
 	}
 
