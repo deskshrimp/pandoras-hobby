@@ -3,7 +3,7 @@ this.ph_skeleton_priest_champ_agent <- this.inherit("scripts/ai/tactical/agent",
 	function create()
 	{
 		this.agent.create();
-		this.m.ID = this.Const.AI.Agent.ID.SkeletonPriest;		
+		this.m.ID = "agent.skeleton.priest_champ";
 		this.m.Properties.TargetPriorityHitchanceMult = 0.0;
 		this.m.Properties.TargetPriorityHitpointsMult = 0.5;
 		this.m.Properties.TargetPriorityRandomMult = 0.0;

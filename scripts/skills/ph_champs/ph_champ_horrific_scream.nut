@@ -4,7 +4,7 @@ this.ph_champ_horrific_scream <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "actives.ph_champ_horrific_scream";
 		this.m.Name = "Banshee Wail";
-		this.m.Description = "";
+		this.m.Description = "Let loose an echoing wail causing your enemies to flee and scatter!";
 		this.m.Icon = "skills/active_41.png";
 		this.m.IconDisabled = "skills/active_41.png";
 		this.m.Overlay = "active_41";
@@ -45,7 +45,7 @@ this.ph_champ_horrific_scream <- this.inherit("scripts/skills/skill", {
             local diff = ::Math.abs(_targetTile.Level - tile.Level);
 
             //scream at the tile
-            this.screamAtTile(tile, diff, -10);
+            this.screamAtTile(tile, diff, -3, _user);
             
             //now echo out again from there!
             this.echoScreamAOE(_user, tile);
@@ -64,13 +64,14 @@ this.ph_champ_horrific_scream <- this.inherit("scripts/skills/skill", {
             local diff = ::Math.abs(_targetTile.Level - tile.Level);
 
             //scream at the tile
-            this.screamAtTile(tile, diff, -5);
+            this.screamAtTile(tile, diff, -1, _user);
         }
     }
 
-    function screamAtTile(_tile, _heightDiff, _diff)
+    function screamAtTile(_tile, _heightDiff, _diff, _user)
     {
         //ensure there is someone there and that they are within the height allowance
+		//we also check for allies, but should we?
 
         if (!_tile.IsOccupiedByActor || _tile.getEntity().isAlliedWith(_user)) { return; }
         
@@ -79,5 +80,26 @@ this.ph_champ_horrific_scream <- this.inherit("scripts/skills/skill", {
         //then scream at them
         _tile.getEntity().checkMorale(-1, _diff + _heightDiff, ::Const.MoraleCheckType.MentalAttack);
     }
+
+	function getTooltip()
+	{
+		local ret = this.skill.getDefaultUtilityTooltip();
+
+		ret.push({
+			id = 10,
+			type = "text",
+			icon = "ui/icons/bravery.png",
+			text = ::Reforged.Mod.Tooltips.parseString("All targets in radius receive one or more mental [morale checks|Concept.Morale]")
+		});
+
+		ret.push({
+			id = 11,
+			type = "text",
+			icon = "ui/icons/vision.png",
+			text = "Wail originates from the user, then echoes on each adjacent tile."
+		});
+
+		return ret;
+	}
 });
 

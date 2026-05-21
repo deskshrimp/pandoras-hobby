@@ -13,9 +13,9 @@
         local baseProperties = this.m.BaseProperties;
         baseProperties.IsImmuneToZoneOfControl = true;
         baseProperties.IsImmuneToDamageReflection = true;
-        baseProperties.MeleeSkill += 10;        
+        baseProperties.MeleeSkill += 10;
         baseProperties.ActionPoints += 1;
-        baseProperties.Hitpoints = 100;
+        baseProperties.Hitpoints = 65;
 
         //add new skills        
         this.getSkills().add(::new("scripts/skills/ph_champs/ethereal"));
@@ -30,12 +30,8 @@
         this.getSkills().add(::new("scripts/skills/ph_champs/ph_champ_horrific_scream"));
 
         //Update AI Details
-        this.m.AIAgent.m.Properties.EngageRangeMin = 1;
-		this.m.AIAgent.m.Properties.EngageRangeMax = 2;
-		this.m.AIAgent.m.Properties.EngageRangeIdeal = 1;
-
-        this.m.AIAgent.getBehavior(::Const.AI.Behavior.ID.AttackDefault).m.PossibleSkills.push("actives.ph_champ_ghastly_touch");
-        this.m.AIAgent.getBehavior(::Const.AI.Behavior.ID.Terror).m.PossibleSkills.push("actives.ph_champ_horrific_scream");
+        this.m.AIAgent = ::new("scripts/ai/tactical/agents/ph_ghost_champ_agent");        
+		this.m.AIAgent.setActor(this);
 
         return true;
     }
@@ -72,16 +68,17 @@
 
         if(ret.len() < 2) return ret;
 
+        if(!this.m.IsMiniboss) return ret;
+
         foreach( item in ret )
         {
-            if(item.icon == "ui/icons/health.png")
+            if(item.id == 7 && item.icon == "ui/icons/health.png")
             {
                 item.icon = "ui/icons/ph_ethereal_icon.png";
-                item.text = "Spirit";
+                item.style = "fatigue-slim"
                 break;
             }
         }
-
         return ret;
     }
 });

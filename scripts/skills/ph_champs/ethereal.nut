@@ -7,7 +7,7 @@ this.ethereal <- this.inherit("scripts/skills/skill", {
 		this.m.Name = "Ethereal";
 		this.m.Description = "This creature is a semi-solid apparation, which makes it devilishly hard to kill.";
 		this.m.Icon = "skills/ph_barb_pot_effect.png";		
-		this.m.Type = ::Const.SkillType.Special;
+		this.m.Type = ::Const.SkillType.Special | this.Const.SkillType.Racial | this.Const.SkillType.StatusEffect;
         this.m.Order = ::Const.SkillOrder.Perk;
 		this.m.IsActive = false;
 		this.m.IsStacking = false;
@@ -19,7 +19,7 @@ this.ethereal <- this.inherit("scripts/skills/skill", {
 		if (_skill.getID() == "effects.holy_water")
 		{
 			//holy water deals (20 per turn)
-			_properties.DamageReceivedTotalMult *= 1.0;
+			_properties.DamageReceivedTotalMult *= 0.5;
 		}
 		else
 		{
@@ -31,16 +31,16 @@ this.ethereal <- this.inherit("scripts/skills/skill", {
 			{
 				if(_skill.getItem().isItemType( ::Const.Items.ItemType.Legendary ))
 				{
-					dmgMult += 0.2;
+					dmgMult += 0.1;
 				}
 				else if(_skill.getItem().isItemType( ::Const.Items.ItemType.Named ))
 				{
-					dmgMult += 0.1;
+					dmgMult += 0.05;
 				}
 			}
 
 			//reduced ranged dmg by 50%
-			if(_skill.IsRanged) dmgMult *= 0.5;
+			if(_skill.isRanged()) dmgMult *= 0.5;
 			
 			_properties.DamageReceivedTotalMult *= dmgMult;
 		}
@@ -50,7 +50,7 @@ this.ethereal <- this.inherit("scripts/skills/skill", {
 	{
 		local actor = this.getContainer().getActor();
 		local healthMissing = actor.getHitpointsMax() - actor.getHitpoints();
-		local healthAdded = this.Math.min( healthMissing, 5 );
+		local healthAdded = this.Math.min( healthMissing, ::Math.rand(1, 5) );
 
 		if (healthAdded <= 0)
 		{
@@ -70,19 +70,21 @@ this.ethereal <- this.inherit("scripts/skills/skill", {
 
 	function getTooltip()
 	{
-		local ret = this.getDefaultTooltip();
+		local ret = skill.getTooltip();
 		ret.push({
 			id = 10,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "Greatly reduces all incoming damage. Receives increased damage from named & legendary weapons. Receives full damage from holy water."
+			text = "Greatly reduces all incoming damage. Receives increased damage from holy water and named & legendary weapons."
 		});
+		
 		ret.push({
 			id = 11,
 				type = "text",
 				icon = "ui/icons/ph_ethereal_icon.png",
 				text = "Restores up to [color=" + this.Const.UI.Color.PositiveValue + "]5[/color] Spirit each turn"
 		});
+		
 		ret.push({
 			id = 11,
 			type = "text",

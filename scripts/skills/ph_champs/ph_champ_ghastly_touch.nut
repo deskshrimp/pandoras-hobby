@@ -4,7 +4,7 @@ this.ph_champ_ghastly_touch <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "actives.ph_champ_ghastly_touch";
 		this.m.Name = "Withering Touch";
-		this.m.Description = "";
+		this.m.Description = "Attack the very soul of an opponent, damaging them through their armor.";
 		this.m.KilledString = "Frightened to death";
 		this.m.Icon = "skills/active_42.png";
 		this.m.IconDisabled = "skills/active_42.png";
@@ -28,21 +28,52 @@ this.ph_champ_ghastly_touch <- this.inherit("scripts/skills/skill", {
 
 	function onUpdate( _properties )
 	{
-		_properties.DamageRegularMin += 15;
+		_properties.DamageRegularMin += 10;
 		_properties.DamageRegularMax += 25;
 		_properties.IsIgnoringArmorOnAttack = true;
 	}
 
-    function onUse( _user, _targetTile ) {
-        local success = this.attackEntity(_user, _targetTile.getEntity());
+    function onUse( _user, _targetTile )
+	{   		
+		local success = this.attackEntity(_user, _targetTile.getEntity());		
 
-        local target = _targetTile.getEntity();
-        if(!target.isAlive() || target.isDying()) return success;
+		if (!_user.isAlive() || _user.isDying())
+		{
+			return;
+		}
 
-        //apply wither!
-        target.getSkills().add(::new("scripts/skills/effects/withered_effect"));
+		if (success && !_targetTile.IsEmpty)
+		{
+			local target = _targetTile.getEntity();
+			if (!target.isAlive() || target.isDying())
+			{
+				//apply wither!
+        		target.getSkills().add(::new("scripts/skills/effects/withered_effect"));
+			}
+		}
 
 		return success;
     }
+
+	function onAnySkillUsed( _skill, _targetEntity, _properties )
+	{
+		if (_skill == this)
+		{
+			_properties.DamageArmorMult *= 0.0;
+			_properties.IsIgnoringArmorOnAttack = true;
+		}
+	}
+
+	function getTooltip()
+	{
+		local ret = this.getDefaultTooltip();
+		ret.push({
+			id = 6,
+			type = "text",
+			icon = "ui/icons/special.png",
+			text = ::Reforged.Mod.Tooltips.parseString("Inflicts [$ $|Skill+withered_effect] on hit")			
+		});
+		return ret;
+	}
 
 });
