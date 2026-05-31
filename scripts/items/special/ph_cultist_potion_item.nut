@@ -103,7 +103,7 @@ this.ph_cultist_potion_item <- this.inherit("scripts/items/item", {
 
     function canBecomeCultist(_actor)
     {
-        if( _actor().PH_isCultist() ) return false;
+        if( _actor.PH_isCultist() ) return false;
         
         if (_actor.getFlags().get("IsSpecial") || _actor.getFlags().get("IsPlayerCharacter") || _actor.getBackground().getID() == "background.slave") return false;
 
@@ -119,7 +119,7 @@ this.ph_cultist_potion_item <- this.inherit("scripts/items/item", {
 		if (_actor.getSkills().hasSkill("trait.cultist_zealot")) return 2;
 		if (_actor.getSkills().hasSkill("trait.cultist_fanatic")) return 1;
 
-        if( _actor().PH_isCultist() ) return 0;
+        if( _actor.PH_isCultist() ) return 0;
 
         return -1;
     }
