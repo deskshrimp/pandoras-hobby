@@ -9,9 +9,16 @@
 
 		this.getSprite("miniboss").setBrush("bust_miniboss");
 
-        //perks to make him thrash morale
-        this.m.Skills.add(::new("scripts/skills/perks/perk_fearsome"));
-		this.m.Skills.add(::new("scripts/skills/perks/perk_rf_menacing"));
+        //Hardened removes and overwrites the reforged perks using the grow method so we need to be mindful about what we add here        
+        if(this.getSize() == 3){
+            //perks to make him thrash morale
+            this.m.Skills.add(::new("scripts/skills/perks/perk_fearsome"));
+		    this.m.Skills.add(::new("scripts/skills/perks/perk_rf_menacing"));
+        }
+        else
+        {
+            this.m.Skills.add(::new("scripts/skills/perks/perk_rf_battle_fervor"));
+        }
 
         return true;
     }

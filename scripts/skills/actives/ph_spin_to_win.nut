@@ -1,5 +1,7 @@
 this.ph_spin_to_win <- this.inherit("scripts/skills/skill", {
-	m = {},
+	m = {
+		TilesUsed = []
+	},
 	function create()
 	{
 		this.m.ID = "actives.ph_spin_to_win";

@@ -87,7 +87,13 @@ if ( ::Hooks.hasMod("mod_hardened") )
 ::Const.World.Spawn.Troops.Alp.NameList <- ::Const.Strings.GoblinNames;
 ::Const.World.Spawn.Troops.Alp.TitleList <- null;
 
-//Nacho Ghouls -- high only to avoid hitting the HD growth code (rarely spawn as tier 3)
+//Nacho Ghouls 
+//-- medium but will have different mods
+::Const.World.Spawn.Troops.Ghoul.Variant = 1;
+::Const.World.Spawn.Troops.Ghoul.NameList <- ::Const.Strings.PH_GhoulNames;
+::Const.World.Spawn.Troops.Ghoul.TitleList <- ::Const.Strings.PH_GhoulTitles;
+Ghoul
+//-- high only to avoid hitting the HD growth code (rarely spawn as tier 3)
 ::Const.World.Spawn.Troops.GhoulHIGH.Variant = 5;
 ::Const.World.Spawn.Troops.GhoulHIGH.NameList <- ::Const.Strings.PH_GhoulNames;
 ::Const.World.Spawn.Troops.GhoulHIGH.TitleList <- ::Const.Strings.PH_GhoulTitles;

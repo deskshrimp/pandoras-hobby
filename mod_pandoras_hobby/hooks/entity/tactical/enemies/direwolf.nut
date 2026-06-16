@@ -23,7 +23,7 @@
 	    baseProperties.RangedDefense += 5;
         baseProperties.ArmorMax[0] += 50;
 		baseProperties.ArmorMax[1] += 50;
-		baseProperties.Armor = clone b.ArmorMax;
+		baseProperties.Armor = clone baseProperties.ArmorMax;
 
         //Add skills
         if (this.getSkills().hasSkill("perk.overwhelm"))
@@ -102,7 +102,7 @@
 
 				if (head_frenzy.HasBrush)
 				{
-					decal = _tile.spawnDetail("bust_direwolf_03_head_dead_frenzy", this.Const.Tactical.DetailFlag.Corpse, flip);
+					decal = _tile.spawnDetail("bust_direwolf_03_head_frenzy_dead", this.Const.Tactical.DetailFlag.Corpse, flip);
 					decal.Scale = 0.95;
 				}
 			}
@@ -114,7 +114,7 @@
 
 				if (head_frenzy.HasBrush)
 				{
-					layers.push("bust_direwolf_03_head_dead_frenzy");
+					layers.push("bust_direwolf_03_head_frenzy_dead");
 				}
 
 				local decap = this.Tactical.spawnHeadEffect(this.getTile(), layers, this.createVec(0, 0), 0.0, "bust_direwolf_head_bloodpool");
