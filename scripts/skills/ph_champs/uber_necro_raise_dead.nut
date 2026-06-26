@@ -132,7 +132,7 @@ this.uber_necro_raise_dead <- this.inherit("scripts/skills/skill", {
 
             if ( targetTile.IsOccupiedByActor ) { continue; }
 
-			possibleTile.push(targetTile);
+			possibleTiles.push(targetTile);
 
             //distance of 2
             for( local i = 0; i != 6; ++i )
@@ -142,7 +142,7 @@ this.uber_necro_raise_dead <- this.inherit("scripts/skills/skill", {
 
                 if ( targetTile2.IsOccupiedByActor ) { continue; }
 
-                possibleTile.push(targetTile2);
+                possibleTiles.push(targetTile2);
             }
 		}
 
