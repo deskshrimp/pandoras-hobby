@@ -108,7 +108,7 @@ this.uber_necro_raise_dead <- this.inherit("scripts/skills/skill", {
 
 	function onUse( _user, _targetTile )
 	{
-		local entity = this.Tactical.spawnEntity(this.m.Scripts.roll(), tile.Coords.X, tile.Coords.Y);
+		local entity = this.Tactical.spawnEntity(this.m.Scripts.roll(), _targetTile.Coords.X, _targetTile.Coords.Y);
 		entity.setFaction(::Const.Faction.Undead);
 
 		//consume spirit

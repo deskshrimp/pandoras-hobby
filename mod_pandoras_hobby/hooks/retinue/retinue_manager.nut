@@ -282,6 +282,9 @@
 		{
 			f.updateBasicInfo(this.PH_getFlags());
 		}
+
+		//__original recomputed the asset flags before the skills were loaded, redo it
+		this.World.Assets.resetToDefaults();
 	}
 
 	q.PH_onTrainerCompare <- function ( _f1, _f2 )

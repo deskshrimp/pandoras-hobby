@@ -47,7 +47,8 @@ this.ph_adventurers_headgear <- this.inherit("scripts/items/helmets/helmet", {
 	function onUpdateProperties( _properties )
 	{
 		this.helmet.onUpdateProperties(_properties);
-		_properties.IsResistantToMiasma = true;
+		//_properties.IsResistantToMiasma = true;	//old code
+		_properties.DamageReceivedMiasmaMult = 0.5;
 	}
 });
 

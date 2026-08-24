@@ -346,7 +346,7 @@ this.ph_follower_steward <- this.inherit("scripts/retinue/ph_follower", {
 
         //::logInfo("Steward > Cook Gruel > Foods = " + meats.len() + " / " + grains.len() );
 
-        if(meats.len() >= grains.len())
+        if(meats.len() > 0 && meats.len() >= grains.len())
         {
             this.cookFood("ph_jerky_item", meats, other, totalMeat);
         }
